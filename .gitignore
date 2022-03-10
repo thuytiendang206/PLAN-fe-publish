@@ -1,0 +1,11 @@
+# Visual Studio
+*.sdf
+*.opensdf
+*.suo
+
+# OSX
+**/.DS_Store
+.DS_Store
+
+# IDEA config files
+.idea/
