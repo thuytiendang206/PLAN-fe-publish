@@ -1,9 +1,13 @@
-$primary-violet: #311946;
-$primary-blue-light: #00ebd4;
-$primary-pink: #E70954;
-$background-color: #f9f6fc;
-$secondary-white: #ffffff;
-$font-family: "Poppins", sans-serif;
+$primary-blue: #0072CE;
+$secondary-white: #FFFFFF;
+$primary-orange: #E17800;
+
+@font-face {
+  font-family: 'Veneer';
+  src: url("../fonts/veneer-webfont.ttf") format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+$font-family: "Veneer", sans-serif;
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -30,7 +34,7 @@ html {
 
 body {
   font-family: $font-family;
-  color: $primary-violet;
+  color: $primary-blue;
   overflow: hidden;
 }
 
@@ -46,3 +50,66 @@ body {
   padding: 0.264rem 3rem;
   border-radius: 8px;
 }
+
+.cl-orange {
+  color: $primary-orange !important;
+}
+
+.cl-blue {
+  color: $primary-blue !important;
+}
+
+/*--------------------------------------------------------------
+# TWO PHOTOS PAGE
+--------------------------------------------------------------*/
+#two-photo-first-page {
+  background-color: $primary-blue;
+
+  div.logo > a {
+    img {
+      max-height: 53px;
+      display: inline-block;
+      width: fit-content;
+    }
+  }
+
+  .navbar {
+    #menu-label {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 34px;
+      text-align: center;
+      color: $secondary-white;
+    }
+
+    img {
+      max-height: 53px;
+      width: fit-content;
+    }
+  }
+
+  section.two-pt-hero-section {
+    img {
+      max-height: 162px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 106px;
+      text-align: center;
+      color: $secondary-white;
+    }
+
+  }
+}
+
+/*--------------------------------------------------------------
+# END TWO PHOTOS PAGE
+--------------------------------------------------------------*/
