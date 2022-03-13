@@ -4,6 +4,10 @@
   src: url("../fonts/veneer-webfont.ttf") format("truetype");
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+@font-face {
+  font-family: "VeneerThree";
+  src: url("../fonts/FontsFree-Net-Veneer-W01-Two.ttf") format("truetype");
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -29,7 +33,7 @@ html {
 }
 
 body {
-  font-family: "Veneer", sans-serif;
+  font-family: "Veneer";
   color: #0072CE;
   overflow: hidden;
 }
@@ -55,6 +59,68 @@ body {
   color: #0072CE !important;
 }
 
+.chevron-down .scroll-down {
+  font-size: 40px;
+  display: inline-block;
+  color: #FFFFFF;
+}
+.chevron-down a {
+  width: fit-content;
+}
+.chevron-down i {
+  -webkit-text-stroke: 1px;
+}
+.chevron-down .bi-chevron-down::before {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.quote {
+  padding: 4rem 0;
+}
+.quote p.quote-text > span {
+  position: relative;
+}
+.quote img {
+  width: 80%;
+  position: absolute;
+  z-index: -1;
+  max-width: 120px;
+}
+.quote img.open-quote {
+  top: -20%;
+  left: -40%;
+}
+.quote img.close-quote {
+  bottom: -22%;
+  right: -50%;
+}
+.quote p.author {
+  z-index: 100000;
+}
+.quote .quote-text {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 41px;
+  color: #0072CE;
+}
+.quote .author {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30.1713px;
+  line-height: 35px;
+  color: #243C4B;
+}
+
 /*--------------------------------------------------------------
 # TWO PHOTOS PAGE
 --------------------------------------------------------------*/
@@ -67,7 +133,7 @@ body {
   width: fit-content;
 }
 #two-photo-first-page .navbar #menu-label {
-  font-family: "Veneer", sans-serif;
+  font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -85,13 +151,158 @@ body {
   margin: 0 auto;
 }
 #two-photo-first-page section.two-pt-hero-section h1, #two-photo-first-page section.two-pt-hero-section h2 {
-  font-family: "Veneer", sans-serif;
+  font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
   font-size: 88px;
   line-height: 106px;
   text-align: center;
   color: #FFFFFF;
+}
+
+#main-two-photos .stories-1 {
+  margin: 8.5rem auto;
+}
+#main-two-photos .stories-1 .stories-1-text p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+}
+#main-two-photos .stories-1 .stories-1-text .title {
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+#main-two-photos .stories-2 {
+  margin: 8.5rem auto;
+}
+#main-two-photos .stories-2 p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+#main-two-photos .stories-2 img {
+  width: 30%;
+  margin: 0 auto;
+}
+#main-two-photos .highlight-1 div.col-6 {
+  padding: 0;
+}
+#main-two-photos .highlight-1 .highlight-1-text-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #F1C400;
+}
+#main-two-photos .highlight-1 p {
+  font-family: "VeneerThree";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 136%;
+  color: #243C4B;
+}
+#main-two-photos .stories-3 {
+  margin: 8.5rem auto;
+}
+#main-two-photos .stories-3 .stories-3-text-wrapper p {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+#main-two-photos .stories-3 .stories-3-text-wrapper p.title {
+  font-style: italic;
+  color: #0072CE;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#main-two-photos .highlight-2 {
+  background-color: #0072CE;
+  padding: 6rem 0;
+}
+#main-two-photos .highlight-2 .highlight-2-text p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+#main-two-photos .highlight-2 .highlight-2-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-two-photos .highlight-2 .highlight-2-img-wrapper img {
+  width: 65%;
+}
+#main-two-photos .cta {
+  background-color: #0072CE;
+  padding: 8.5rem 0;
+}
+#main-two-photos .cta h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 106px;
+  color: #FFFFFF;
+}
+#main-two-photos .cta p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+#main-two-photos .next-story {
+  background-color: #F1C400;
+  position: relative;
+}
+#main-two-photos .next-story div.next-story-content {
+  position: absolute;
+  top: 0;
+  margin: 5rem auto;
+}
+#main-two-photos .next-story h2 {
+  text-transform: uppercase;
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 106px;
+  color: #243C4B;
+  margin-bottom: 17rem;
+}
+#main-two-photos .next-story p {
+  text-transform: uppercase;
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 45px;
+  color: #243C4B;
+}
+#main-two-photos .next-story .chevron-down {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 39px);
+}
+#main-two-photos .next-story .chevron-down .bi-chevron-down::before {
+  border-color: #243C4B;
+}
+#main-two-photos .next-story .scroll-down {
+  color: #243C4B;
 }
 
 /*--------------------------------------------------------------

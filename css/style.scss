@@ -1,13 +1,28 @@
 $primary-blue: #0072CE;
-$secondary-white: #FFFFFF;
 $primary-orange: #E17800;
+$secondary-white: #FFFFFF;
+$secondary-black: #000000;
+$secondary-black-blue: #243C4B;
+$secondary-yellow: #F1C400;
+
 
 @font-face {
   font-family: 'Veneer';
   src: url("../fonts/veneer-webfont.ttf") format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
-$font-family: "Veneer", sans-serif;
+$font-veneer: "Veneer";
+
+@font-face {
+  font-family: 'VeneerThree';
+  src: url("../fonts/FontsFree-Net-Veneer-W01-Two.ttf") format('truetype');
+}
+
+$font-Veneer-Three: 'VeneerThree';
+
+$font-roboto: 'Roboto', sans-serif;
+$font-arial: 'Roboto', sans-serif;
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -33,7 +48,7 @@ html {
 }
 
 body {
-  font-family: $font-family;
+  font-family: $font-veneer;
   color: $primary-blue;
   overflow: hidden;
 }
@@ -59,6 +74,80 @@ body {
   color: $primary-blue !important;
 }
 
+.chevron-down {
+  .scroll-down {
+    font-size: 40px;
+    display: inline-block;
+    color: $secondary-white;
+  }
+
+  a {
+    width: fit-content;
+  }
+
+  i {
+    -webkit-text-stroke: 1px;
+  }
+
+  .bi-chevron-down::before {
+    border: 2px solid $secondary-white;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+.quote {
+  padding: 4rem 0;
+
+  p.quote-text > span {
+    position: relative;
+  }
+
+  img {
+    width: 80%;
+    position: absolute;
+    z-index: -1;
+    max-width: 120px;
+  }
+
+  img.open-quote {
+    top: -20%;
+    left: -40%;
+  }
+
+  img.close-quote {
+    bottom: -22%;
+    right: -50%;
+  }
+
+  p.author {
+    z-index: 100000;
+  }
+
+  .quote-text {
+    font-family: $font-arial;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    color: $primary-blue;
+  }
+
+  .author {
+    font-family: $font-arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30.1713px;
+    line-height: 35px;
+    color: $secondary-black-blue;
+  }
+}
+
 /*--------------------------------------------------------------
 # TWO PHOTOS PAGE
 --------------------------------------------------------------*/
@@ -75,7 +164,7 @@ body {
 
   .navbar {
     #menu-label {
-      font-family: $font-family;
+      font-family: $font-veneer;
       font-style: normal;
       font-weight: 400;
       font-size: 28px;
@@ -98,7 +187,7 @@ body {
     }
 
     h1, h2 {
-      font-family: $font-family;
+      font-family: $font-veneer;
       font-style: normal;
       font-weight: 400;
       font-size: 88px;
@@ -109,6 +198,191 @@ body {
 
   }
 }
+
+#main-two-photos {
+  .stories-1 {
+    margin: 8.5rem auto;
+
+    .stories-1-text {
+      p {
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 32px;
+        line-height: 38px;
+        color: $secondary-black;
+      }
+
+      .title {
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .stories-2 {
+    margin: 8.5rem auto;
+
+    p {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $secondary-black;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 30%;
+      margin: 0 auto;
+    }
+  }
+
+  .highlight-1 {
+    div.col-6 {
+      padding: 0;
+    }
+
+    .highlight-1-text-wrapper {
+      display: flex;
+      align-items: center;
+      background-color: $secondary-yellow;
+    }
+
+    p {
+      font-family: $font-Veneer-Three;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 136%;
+      color: $secondary-black-blue;
+    }
+  }
+
+  .stories-3 {
+    margin: 8.5rem auto;
+
+    .stories-3-text-wrapper {
+      p {
+        font-family: $font-arial;
+        font-size: 28px;
+        line-height: 32px;
+        color: $secondary-black;
+        margin-bottom: 2rem;
+      }
+
+      p.title {
+        font-style: italic;
+        color: $primary-blue;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .highlight-2 {
+    background-color: $primary-blue;
+    padding: 6rem 0;
+
+    .highlight-2-text {
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $secondary-white;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .highlight-2-img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 65%;
+      }
+    }
+  }
+
+  .statistic-section {
+
+  }
+
+  .cta {
+    background-color: $primary-blue;
+    padding: 8.5rem 0;
+
+    h2 {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 106px;
+      color: $secondary-white;
+    }
+
+    p {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $secondary-white;
+    }
+  }
+
+  .next-story {
+    background-color: $secondary-yellow;
+    position: relative;
+
+    div.next-story-content {
+      position: absolute;
+      top: 0;
+      margin: 5rem auto;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 106px;
+      color: $secondary-black-blue;
+      margin-bottom: 17rem;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 45px;
+      color: $secondary-black-blue;
+    }
+
+    .chevron-down{
+      position: absolute;
+      bottom: 50px;
+      left: calc(50% - 39px);
+    }
+
+    .chevron-down .bi-chevron-down::before {
+      border-color: $secondary-black-blue;
+    }
+
+    .scroll-down {
+      color: $secondary-black-blue;
+    }
+  }
+}
+
 
 /*--------------------------------------------------------------
 # END TWO PHOTOS PAGE
