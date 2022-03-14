@@ -104,15 +104,42 @@ strong {
 .quote {
   padding: 4rem 0;
 
+  .quote-text-wrapper {
+    position: relative;
+  }
+
   p.quote-text > span {
     position: relative;
   }
 
-  img {
-    width: 80%;
-    position: absolute;
+  p.quote-text:before {
+    width: 100%;
     z-index: -1;
-    max-width: 120px;
+    position: absolute;
+    left: -14%;
+    top: -17%;
+  }
+
+  p.quote-text:after {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+  }
+
+  p.quote-yellow:before {
+    content: url("../images/open-quote-yellow.svg");
+  }
+
+  p.quote-yellow:after {
+    content: url("../images/close-quote-yellow.svg");
+  }
+
+  p.quote-blue:before {
+    content: url("../images/open-quote-blue.svg");
+  }
+
+  p.quote-blue:after {
+    content: url("../images/close-quote-blue.svg");
   }
 
   img.open-quote {
@@ -367,7 +394,7 @@ strong {
       color: $secondary-black-blue;
     }
 
-    .chevron-down{
+    .chevron-down {
       position: absolute;
       bottom: 50px;
       left: calc(50% - 39px);

@@ -84,14 +84,35 @@ strong {
 .quote {
   padding: 4rem 0;
 }
+.quote .quote-text-wrapper {
+  position: relative;
+}
 .quote p.quote-text > span {
   position: relative;
 }
-.quote img {
-  width: 80%;
-  position: absolute;
+.quote p.quote-text:before {
+  width: 100%;
   z-index: -1;
-  max-width: 120px;
+  position: absolute;
+  left: -14%;
+  top: -17%;
+}
+.quote p.quote-text:after {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.quote p.quote-yellow:before {
+  content: url("../images/open-quote-yellow.svg");
+}
+.quote p.quote-yellow:after {
+  content: url("../images/close-quote-yellow.svg");
+}
+.quote p.quote-blue:before {
+  content: url("../images/open-quote-blue.svg");
+}
+.quote p.quote-blue:after {
+  content: url("../images/close-quote-blue.svg");
 }
 .quote img.open-quote {
   top: -20%;
