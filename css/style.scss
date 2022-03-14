@@ -20,8 +20,15 @@ $font-veneer: "Veneer";
 
 $font-Veneer-Three: 'VeneerThree';
 
+@font-face {
+  font-family: 'CorePaintB3W01-Regular';
+  src: url("../fonts/FontsFree-Net-Veneer-W01-Two.ttf") format('truetype');
+}
+
+$font-core-paint: 'CorePaintB3W01-Regular';
+
 $font-roboto: 'Roboto', sans-serif;
-$font-arial: 'Roboto', sans-serif;
+$font-arial: 'Arial', sans-serif;
 
 /*--------------------------------------------------------------
 # General
@@ -73,6 +80,28 @@ body {
 .cl-blue {
   color: $primary-blue !important;
 }
+
+.bg-orange {
+  background-color: $primary-orange !important;
+}
+
+.bg-blue {
+  background-color: $primary-blue !important;
+}
+
+.btn.btn-yellow {
+  background: $secondary-yellow;
+  color: $secondary-black-blue;
+  padding: 0.7rem 1.88rem;
+  border-radius: 4px;
+  font-family: $font-core-paint;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27.7214px;
+  line-height: 34px;
+  transition: all 0.5s;
+}
+
 
 .chevron-down {
   .scroll-down {
@@ -180,29 +209,34 @@ strong {
 --------------------------------------------------------------*/
 #two-photo-first-page {
   background-color: $primary-blue;
+  position: relative;
 
-  div.logo > a {
-    img {
-      max-height: 53px;
-      display: inline-block;
-      width: fit-content;
-    }
-  }
+  #header {
+    padding: 1.75rem 0 1rem 0;
 
-  .navbar {
-    #menu-label {
-      font-family: $font-veneer;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 34px;
-      text-align: center;
-      color: $secondary-white;
+    div.logo > a {
+      img {
+        max-height: 53px;
+        display: inline-block;
+        width: fit-content;
+      }
     }
 
-    img {
-      max-height: 53px;
-      width: fit-content;
+    .navbar {
+      #menu-label {
+        font-family: $font-veneer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+        color: $secondary-white;
+      }
+
+      img {
+        max-height: 53px;
+        width: fit-content;
+      }
     }
   }
 
@@ -223,6 +257,18 @@ strong {
       color: $secondary-white;
     }
 
+    h1 {
+      color: $primary-blue;
+    }
+
+    h1 > span {
+      background-color: $secondary-white;
+    }
+
+    .chevron-down {
+      position: absolute;
+      bottom: 10px;
+    }
   }
 }
 
@@ -337,6 +383,96 @@ strong {
   }
 
   .statistic-section {
+    margin: 8.5rem auto;
+
+    .statistic-chart {
+      h2 {
+        font-family: $font-veneer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 88px;
+        line-height: 106px;
+        color: $primary-blue;
+        margin-bottom: 2rem;
+      }
+
+      .statistic-des {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 41px;
+        color: $primary-blue;
+      }
+
+      .signal-wrapper {
+        margin: 2rem auto;
+      }
+
+      .signal-des {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-family: $font-arial;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          margin: 0;
+          padding-left: 0.5rem;
+        }
+      }
+
+      .signal-icon {
+        width: 15px;
+        height: 7px;
+      }
+    }
+
+    .statistic-flag {
+      background-color: $primary-blue;
+      color: $secondary-white;
+      padding: 2.75rem 0;
+      display: flex;
+
+      .statistic-flag-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      h3 {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 41px;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: $font-veneer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 88px;
+        line-height: 106px;
+        text-align: center;
+      }
+
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      img {
+        max-width: 231px;
+        margin: 0 auto;
+      }
+    }
 
   }
 
