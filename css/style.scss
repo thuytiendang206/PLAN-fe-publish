@@ -204,15 +204,12 @@ strong {
   }
 }
 
-/*--------------------------------------------------------------
-# TWO PHOTOS PAGE
---------------------------------------------------------------*/
-#two-photo-first-page {
+#first-page-photo {
   background-color: $primary-blue;
   position: relative;
 
   #header {
-    padding: 1.75rem 0 1rem 0;
+    padding: 1.75rem 0 0 0;
 
     div.logo > a {
       img {
@@ -223,6 +220,8 @@ strong {
     }
 
     .navbar {
+      padding: 0;
+
       #menu-label {
         font-family: $font-veneer;
         font-style: normal;
@@ -240,7 +239,7 @@ strong {
     }
   }
 
-  section.two-pt-hero-section {
+  section.hero-section {
     img {
       max-height: 162px;
       width: fit-content;
@@ -271,6 +270,194 @@ strong {
     }
   }
 }
+
+.statistic-section {
+  margin: 8.5rem auto;
+
+  .statistic-chart {
+    h2 {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 106px;
+      color: $primary-blue;
+      margin-bottom: 2rem;
+    }
+
+    .statistic-des {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 41px;
+      color: $primary-blue;
+    }
+
+    .signal-wrapper {
+      margin: 2rem auto;
+    }
+
+    .signal-des {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        padding-left: 0.5rem;
+      }
+    }
+
+    .signal-icon {
+      width: 15px;
+      height: 7px;
+    }
+  }
+
+  .statistic-flag {
+    background-color: $primary-blue;
+    color: $secondary-white;
+    padding: 2.75rem 0;
+    display: flex;
+
+    .statistic-flag-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    h3 {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 41px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 106px;
+      text-align: center;
+    }
+
+    p {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    img {
+      max-width: 231px;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.cta {
+  background-color: $primary-blue;
+  padding: 8.5rem 0;
+
+  h2 {
+    font-family: $font-veneer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 106px;
+    color: $secondary-white;
+  }
+
+  p {
+    font-family: $font-arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: $secondary-white;
+  }
+}
+
+.next-story {
+  background-color: $secondary-yellow;
+  position: relative;
+
+  div.next-story-content {
+    position: absolute;
+    top: 0;
+    margin: 5rem auto;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-family: $font-veneer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 106px;
+    color: $secondary-black-blue;
+    margin-bottom: 17rem;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-family: $font-veneer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 45px;
+    color: $secondary-black-blue;
+  }
+
+  .chevron-down {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 39px);
+  }
+
+  .chevron-down .bi-chevron-down::before {
+    border-color: $secondary-black-blue;
+  }
+
+  .scroll-down {
+    color: $secondary-black-blue;
+  }
+}
+
+.image-n-quote {
+  div.col-6 {
+    padding: 0;
+  }
+
+  .inq-text-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: $secondary-yellow;
+  }
+
+  p {
+    font-family: $font-Veneer-Three;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 136%;
+    color: $secondary-black-blue;
+  }
+}
+
+/*--------------------------------------------------------------
+# TWO PHOTOS PAGE
+--------------------------------------------------------------*/
 
 #main-two-photos {
   .stories-1 {
@@ -310,27 +497,6 @@ strong {
     img {
       width: 30%;
       margin: 0 auto;
-    }
-  }
-
-  .highlight-1 {
-    div.col-6 {
-      padding: 0;
-    }
-
-    .highlight-1-text-wrapper {
-      display: flex;
-      align-items: center;
-      background-color: $secondary-yellow;
-    }
-
-    p {
-      font-family: $font-Veneer-Three;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 56px;
-      line-height: 136%;
-      color: $secondary-black-blue;
     }
   }
 
@@ -382,171 +548,40 @@ strong {
     }
   }
 
-  .statistic-section {
-    margin: 8.5rem auto;
+  .s6pt-highlight-2 {
+    background: url("../images/stories-6-03.jpg") no-repeat;
+    background-size: cover;
 
-    .statistic-chart {
-      h2 {
-        font-family: $font-veneer;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 88px;
-        line-height: 106px;
-        color: $primary-blue;
-        margin-bottom: 2rem;
-      }
-
-      .statistic-des {
-        font-family: $font-arial;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-        color: $primary-blue;
-      }
-
-      .signal-wrapper {
-        margin: 2rem auto;
-      }
-
-      .signal-des {
-        display: flex;
-        align-items: center;
-
-        p {
-          font-family: $font-arial;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 28px;
-          margin: 0;
-          padding-left: 0.5rem;
-        }
-      }
-
-      .signal-icon {
-        width: 15px;
-        height: 7px;
-      }
-    }
-
-    .statistic-flag {
-      background-color: $primary-blue;
-      color: $secondary-white;
-      padding: 2.75rem 0;
-      display: flex;
-
-      .statistic-flag-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-      }
-
-      h3 {
-        font-family: $font-arial;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-        text-align: center;
-      }
-
-      h2 {
-        font-family: $font-veneer;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 88px;
-        line-height: 106px;
-        text-align: center;
-      }
-
-      p {
-        font-family: $font-arial;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
-      }
-
-      img {
-        max-width: 231px;
-        margin: 0 auto;
-      }
-    }
-
-  }
-
-  .cta {
-    background-color: $primary-blue;
-    padding: 8.5rem 0;
-
-    h2 {
-      font-family: $font-veneer;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 88px;
-      line-height: 106px;
-      color: $secondary-white;
-    }
-
-    p {
-      font-family: $font-arial;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 28px;
-      color: $secondary-white;
+    img {
+      visibility: hidden;
     }
   }
 
-  .next-story {
-    background-color: $secondary-yellow;
-    position: relative;
-
-    div.next-story-content {
-      position: absolute;
-      top: 0;
-      margin: 5rem auto;
-    }
-
-    h2 {
-      text-transform: uppercase;
-      font-family: $font-veneer;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 88px;
-      line-height: 106px;
-      color: $secondary-black-blue;
-      margin-bottom: 17rem;
-    }
-
-    p {
-      text-transform: uppercase;
-      font-family: $font-veneer;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 45px;
-      line-height: 45px;
-      color: $secondary-black-blue;
-    }
-
-    .chevron-down {
-      position: absolute;
-      bottom: 50px;
-      left: calc(50% - 39px);
-    }
-
-    .chevron-down .bi-chevron-down::before {
-      border-color: $secondary-black-blue;
-    }
-
-    .scroll-down {
-      color: $secondary-black-blue;
-    }
-  }
 }
-
 
 /*--------------------------------------------------------------
 # END TWO PHOTOS PAGE
+--------------------------------------------------------------*/
+#main-six-photos {
+  .s6pt-stories-1 {
+
+  }
+
+  .s6pt-highlight-1 {
+    height: 100vh;
+    background-image: url("../images/vietnam-people.png"), url("../images/vietnam-bg.jpg");
+    background-position: bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, fixed;
+    background-size: 150vh, cover;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# SIX PHOTOS PAGE
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# END SIX PHOTOS PAGE
 --------------------------------------------------------------*/

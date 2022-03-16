@@ -167,22 +167,22 @@ strong {
   color: #243C4B;
 }
 
-/*--------------------------------------------------------------
-# TWO PHOTOS PAGE
---------------------------------------------------------------*/
-#two-photo-first-page {
+#first-page-photo {
   background-color: #0072CE;
   position: relative;
 }
-#two-photo-first-page #header {
-  padding: 1.75rem 0 1rem 0;
+#first-page-photo #header {
+  padding: 1.75rem 0 0 0;
 }
-#two-photo-first-page #header div.logo > a img {
+#first-page-photo #header div.logo > a img {
   max-height: 53px;
   display: inline-block;
   width: fit-content;
 }
-#two-photo-first-page #header .navbar #menu-label {
+#first-page-photo #header .navbar {
+  padding: 0;
+}
+#first-page-photo #header .navbar #menu-label {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
@@ -191,16 +191,16 @@ strong {
   text-align: center;
   color: #FFFFFF;
 }
-#two-photo-first-page #header .navbar img {
+#first-page-photo #header .navbar img {
   max-height: 53px;
   width: fit-content;
 }
-#two-photo-first-page section.two-pt-hero-section img {
+#first-page-photo section.hero-section img {
   max-height: 162px;
   width: fit-content;
   margin: 0 auto;
 }
-#two-photo-first-page section.two-pt-hero-section h1, #two-photo-first-page section.two-pt-hero-section h2 {
+#first-page-photo section.hero-section h1, #first-page-photo section.hero-section h2 {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
@@ -209,17 +209,177 @@ strong {
   text-align: center;
   color: #FFFFFF;
 }
-#two-photo-first-page section.two-pt-hero-section h1 {
+#first-page-photo section.hero-section h1 {
   color: #0072CE;
 }
-#two-photo-first-page section.two-pt-hero-section h1 > span {
+#first-page-photo section.hero-section h1 > span {
   background-color: #FFFFFF;
 }
-#two-photo-first-page section.two-pt-hero-section .chevron-down {
+#first-page-photo section.hero-section .chevron-down {
   position: absolute;
   bottom: 10px;
 }
 
+.statistic-section {
+  margin: 8.5rem auto;
+}
+.statistic-section .statistic-chart h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 106px;
+  color: #0072CE;
+  margin-bottom: 2rem;
+}
+.statistic-section .statistic-chart .statistic-des {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 41px;
+  color: #0072CE;
+}
+.statistic-section .statistic-chart .signal-wrapper {
+  margin: 2rem auto;
+}
+.statistic-section .statistic-chart .signal-des {
+  display: flex;
+  align-items: center;
+}
+.statistic-section .statistic-chart .signal-des p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  padding-left: 0.5rem;
+}
+.statistic-section .statistic-chart .signal-icon {
+  width: 15px;
+  height: 7px;
+}
+.statistic-section .statistic-flag {
+  background-color: #0072CE;
+  color: #FFFFFF;
+  padding: 2.75rem 0;
+  display: flex;
+}
+.statistic-section .statistic-flag .statistic-flag-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.statistic-section .statistic-flag h3 {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+}
+.statistic-section .statistic-flag h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 106px;
+  text-align: center;
+}
+.statistic-section .statistic-flag p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+.statistic-section .statistic-flag img {
+  max-width: 231px;
+  margin: 0 auto;
+}
+
+.cta {
+  background-color: #0072CE;
+  padding: 8.5rem 0;
+}
+.cta h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 106px;
+  color: #FFFFFF;
+}
+.cta p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.next-story {
+  background-color: #F1C400;
+  position: relative;
+}
+.next-story div.next-story-content {
+  position: absolute;
+  top: 0;
+  margin: 5rem auto;
+}
+.next-story h2 {
+  text-transform: uppercase;
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 106px;
+  color: #243C4B;
+  margin-bottom: 17rem;
+}
+.next-story p {
+  text-transform: uppercase;
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 45px;
+  color: #243C4B;
+}
+.next-story .chevron-down {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 39px);
+}
+.next-story .chevron-down .bi-chevron-down::before {
+  border-color: #243C4B;
+}
+.next-story .scroll-down {
+  color: #243C4B;
+}
+
+.image-n-quote div.col-6 {
+  padding: 0;
+}
+.image-n-quote .inq-text-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #F1C400;
+}
+.image-n-quote p {
+  font-family: "VeneerThree";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 136%;
+  color: #243C4B;
+}
+
+/*--------------------------------------------------------------
+# TWO PHOTOS PAGE
+--------------------------------------------------------------*/
 #main-two-photos .stories-1 {
   margin: 8.5rem auto;
 }
@@ -251,22 +411,6 @@ strong {
 #main-two-photos .stories-2 img {
   width: 30%;
   margin: 0 auto;
-}
-#main-two-photos .highlight-1 div.col-6 {
-  padding: 0;
-}
-#main-two-photos .highlight-1 .highlight-1-text-wrapper {
-  display: flex;
-  align-items: center;
-  background-color: #F1C400;
-}
-#main-two-photos .highlight-1 p {
-  font-family: "VeneerThree";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 56px;
-  line-height: 136%;
-  color: #243C4B;
 }
 #main-two-photos .stories-3 {
   margin: 8.5rem auto;
@@ -305,146 +449,31 @@ strong {
 #main-two-photos .highlight-2 .highlight-2-img-wrapper img {
   width: 65%;
 }
-#main-two-photos .statistic-section {
-  margin: 8.5rem auto;
+#main-two-photos .s6pt-highlight-2 {
+  background: url("../images/stories-6-03.jpg") no-repeat;
+  background-size: cover;
 }
-#main-two-photos .statistic-section .statistic-chart h2 {
-  font-family: "Veneer";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 88px;
-  line-height: 106px;
-  color: #0072CE;
-  margin-bottom: 2rem;
-}
-#main-two-photos .statistic-section .statistic-chart .statistic-des {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 41px;
-  color: #0072CE;
-}
-#main-two-photos .statistic-section .statistic-chart .signal-wrapper {
-  margin: 2rem auto;
-}
-#main-two-photos .statistic-section .statistic-chart .signal-des {
-  display: flex;
-  align-items: center;
-}
-#main-two-photos .statistic-section .statistic-chart .signal-des p {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  margin: 0;
-  padding-left: 0.5rem;
-}
-#main-two-photos .statistic-section .statistic-chart .signal-icon {
-  width: 15px;
-  height: 7px;
-}
-#main-two-photos .statistic-section .statistic-flag {
-  background-color: #0072CE;
-  color: #FFFFFF;
-  padding: 2.75rem 0;
-  display: flex;
-}
-#main-two-photos .statistic-section .statistic-flag .statistic-flag-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-#main-two-photos .statistic-section .statistic-flag h3 {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 41px;
-  text-align: center;
-}
-#main-two-photos .statistic-section .statistic-flag h2 {
-  font-family: "Veneer";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 88px;
-  line-height: 106px;
-  text-align: center;
-}
-#main-two-photos .statistic-section .statistic-flag p {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-}
-#main-two-photos .statistic-section .statistic-flag img {
-  max-width: 231px;
-  margin: 0 auto;
-}
-#main-two-photos .cta {
-  background-color: #0072CE;
-  padding: 8.5rem 0;
-}
-#main-two-photos .cta h2 {
-  font-family: "Veneer";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 88px;
-  line-height: 106px;
-  color: #FFFFFF;
-}
-#main-two-photos .cta p {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  color: #FFFFFF;
-}
-#main-two-photos .next-story {
-  background-color: #F1C400;
-  position: relative;
-}
-#main-two-photos .next-story div.next-story-content {
-  position: absolute;
-  top: 0;
-  margin: 5rem auto;
-}
-#main-two-photos .next-story h2 {
-  text-transform: uppercase;
-  font-family: "Veneer";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 88px;
-  line-height: 106px;
-  color: #243C4B;
-  margin-bottom: 17rem;
-}
-#main-two-photos .next-story p {
-  text-transform: uppercase;
-  font-family: "Veneer";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 45px;
-  line-height: 45px;
-  color: #243C4B;
-}
-#main-two-photos .next-story .chevron-down {
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 39px);
-}
-#main-two-photos .next-story .chevron-down .bi-chevron-down::before {
-  border-color: #243C4B;
-}
-#main-two-photos .next-story .scroll-down {
-  color: #243C4B;
+#main-two-photos .s6pt-highlight-2 img {
+  visibility: hidden;
 }
 
 /*--------------------------------------------------------------
 # END TWO PHOTOS PAGE
+--------------------------------------------------------------*/
+#main-six-photos .s6pt-highlight-1 {
+  height: 100vh;
+  background-image: url("../images/vietnam-people.png"), url("../images/vietnam-bg.jpg");
+  background-position: bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-attachment: scroll, fixed;
+  background-size: 150vh, cover;
+}
+
+/*--------------------------------------------------------------
+# SIX PHOTOS PAGE
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# END SIX PHOTOS PAGE
 --------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
