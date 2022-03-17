@@ -51,40 +51,9 @@
     }
 
 
-    /**
-     * Back to top button
-     */
-    let backtotop = select('.back-to-top')
-    if (backtotop) {
-        const toggleBacktotop = () => {
-            if (window.scrollY > 100) {
-                backtotop.classList.add('active')
-            } else {
-                backtotop.classList.remove('active')
-            }
-        }
-        window.addEventListener('load', toggleBacktotop)
-        onscroll(document, toggleBacktotop)
-    }
-
 })()
 
 $(document).ready(function () {
     'use strict';
 
-    $(window).scroll(function () {
-        var scrollDistance = $(window).scrollTop();
-        var hlUnderLine = $('.hl-under-line');
-        var offSet = $(window).height() * 75 / 100;
-
-        /* Under line of News Detail Story */
-        if (hlUnderLine.position().top <= (scrollDistance + offSet)) {
-            hlUnderLine.addClass('active-scroll-under-line');
-        }
-        var staticUnderLine = $('.statistic-under-line');
-        if (staticUnderLine.position().top <= (scrollDistance + offSet)) {
-            staticUnderLine.addClass('active-scroll-under-line');
-        }
-
-    }).scroll();
 })

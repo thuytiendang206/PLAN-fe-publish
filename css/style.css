@@ -42,9 +42,8 @@ body {
   overflow: hidden;
 }
 
-.wrapper {
-  position: relative;
-  background: #ffffff;
+p {
+  margin-bottom: 2rem;
 }
 
 .btn.btn-outline-white {
@@ -381,6 +380,10 @@ strong {
   color: #243C4B;
 }
 
+.section-space {
+  margin: 8.5rem 0;
+}
+
 /*--------------------------------------------------------------
 # TWO PHOTOS PAGE
 --------------------------------------------------------------*/
@@ -464,6 +467,30 @@ strong {
 /*--------------------------------------------------------------
 # END TWO PHOTOS PAGE
 --------------------------------------------------------------*/
+#main-six-photos .s6pt-stories-1 h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  color: #0072CE;
+}
+#main-six-photos .s6pt-stories-1 p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+}
+#main-six-photos .s6pt-stories-1 p.title {
+  margin: 0;
+}
+#main-six-photos .s6pt-stories-1 .s6pt-stories-1-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #main-six-photos .s6pt-highlight-1 {
   height: 100vh;
   background-image: url("../images/vietnam-people.png"), url("../images/vietnam-bg.jpg");
@@ -471,6 +498,82 @@ strong {
   background-repeat: no-repeat, repeat;
   background-attachment: scroll, fixed;
   background-size: 150vh, cover;
+}
+#main-six-photos .s6pt-stories-2 p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+}
+#main-six-photos .s6pt-stories-2 img {
+  height: 50%;
+  width: auto;
+  margin: 0 auto 2rem auto;
+}
+#main-six-photos .s6pt-stories-3 h2 {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 67px;
+  color: #0072CE;
+  margin-bottom: 3.5rem;
+}
+#main-six-photos .s6pt-stories-3 .s6pt-stories-3-text p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+#main-six-photos .s6pt-stories-4 .s6pt-stories-4-text p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+#main-six-photos .s6pt-stories-5 .s6pt-stories-5-text p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+#main-six-photos .s6pt-stories-5 .s6pt-stories-5-text p.title {
+  color: #0072CE;
+}
+#main-six-photos .s6pt-stories-6 h2 {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 67px;
+  color: #0072CE;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-text p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-text img {
+  height: 40%;
+  width: auto;
+  margin: 0 auto 2rem auto;
 }
 
 /*--------------------------------------------------------------

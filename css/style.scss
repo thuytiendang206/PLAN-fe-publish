@@ -60,9 +60,8 @@ body {
   overflow: hidden;
 }
 
-.wrapper {
-  position: relative;
-  background: #ffffff;
+p {
+  margin-bottom: 2rem;
 }
 
 .btn.btn-outline-white {
@@ -458,6 +457,10 @@ strong {
   }
 }
 
+.section-space {
+  margin: 8.5rem 0;
+}
+
 /*--------------------------------------------------------------
 # TWO PHOTOS PAGE
 --------------------------------------------------------------*/
@@ -568,6 +571,33 @@ strong {
 #main-six-photos {
   .s6pt-stories-1 {
 
+    h2 {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 77px;
+      color: $primary-blue;
+    }
+
+    p {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 38px;
+      color: $secondary-black;
+    }
+
+    p.title {
+      margin: 0;
+    }
+
+    .s6pt-stories-1-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .s6pt-highlight-1 {
@@ -579,6 +609,111 @@ strong {
     background-size: 150vh, cover;
   }
 
+  .s6pt-stories-2 {
+
+    p {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: $secondary-black;
+    }
+
+    img {
+      height: 50%;
+      width: auto;
+      margin: 0 auto 2rem auto;
+    }
+  }
+
+  .s6pt-stories-3 {
+    h2 {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 58px;
+      line-height: 67px;
+      color: $primary-blue;
+      margin-bottom: 3.5rem;
+    }
+
+    .s6pt-stories-3-text {
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $secondary-black;
+      }
+    }
+  }
+
+  .s6pt-highlight-3 {
+
+  }
+
+  .s6pt-stories-4 {
+    .s6pt-stories-4-text p {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $secondary-black;
+    }
+  }
+
+  .s6pt-stories-5 {
+    .s6pt-stories-5-text {
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $secondary-black;
+      }
+
+      p.title {
+        color: $primary-blue;
+      }
+    }
+  }
+
+  .s6pt-stories-6 {
+    h2 {
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 58px;
+      line-height: 67px;
+      color: $primary-blue;
+    }
+
+    .s6pt-stories-6-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $secondary-black;
+      }
+
+      img {
+        height: 40%;
+        width: auto;
+        margin: 0 auto 2rem auto;
+      }
+    }
+  }
 }
 
 /*--------------------------------------------------------------
