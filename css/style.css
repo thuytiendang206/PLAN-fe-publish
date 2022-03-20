@@ -593,6 +593,23 @@ strong {
   width: auto;
   margin: 0 auto 2rem auto;
 }
+#main-six-photos .s6pt-highlight-2 .s6pt-highlight-2-img {
+  position: relative;
+}
+#main-six-photos .s6pt-highlight-2 .s6pt-highlight-2-img img {
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-highlight-2 .s6pt-highlight-2-img .hover-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+#main-six-photos .s6pt-highlight-2 .s6pt-highlight-2-img:hover .hover-img {
+  opacity: 1;
+}
 #main-six-photos .s6pt-stories-3 h2 {
   font-family: "Arial", sans-serif;
   font-style: normal;

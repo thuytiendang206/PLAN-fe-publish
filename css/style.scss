@@ -726,6 +726,30 @@ strong {
     }
   }
 
+  .s6pt-highlight-2 {
+    .s6pt-highlight-2-img {
+      position: relative;
+
+      img {
+        transition: all ease-in-out 1s;
+      }
+
+      .hover-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+    .s6pt-highlight-2-img:hover{
+      .hover-img {
+        opacity: 1;
+      }
+    }
+  }
+
   .s6pt-stories-3 {
     h2 {
       font-family: $font-arial;
