@@ -497,7 +497,7 @@ strong {
   flex-direction: column;
   justify-content: center;
 }
-#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image {
+#main-six-photos .s6pt-stories-1 .s6pt-stories-6-img-wrapper {
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -529,7 +529,7 @@ strong {
   opacity: 0;
   transition: all ease-in-out 1s;
 }
-#main-six-photos .s6pt-stories-1 .hover-bar {
+#main-six-photos .s6pt-stories-1 .hover-bar-horizontal {
   position: absolute;
   right: 0;
   left: 0;
@@ -541,26 +541,26 @@ strong {
   flex-direction: column;
   z-index: 1;
 }
-#main-six-photos .s6pt-stories-1 .hover-bar div.bar {
+#main-six-photos .s6pt-stories-1 .hover-bar-horizontal div.bar {
   height: 9px;
   width: 100%;
   background-color: #F1C400;
   transition: all ease-in-out 1s;
 }
-#main-six-photos .s6pt-stories-1 .hover-bar div.hover-bg {
+#main-six-photos .s6pt-stories-1 .hover-bar-horizontal div.hover-bg {
   background-color: #0072CE;
   opacity: 0.75;
   z-index: 1;
   transition: all ease-in-out 1s;
   flex-grow: 1;
 }
-#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image:hover .hover-bar {
+#main-six-photos .s6pt-stories-1 .s6pt-stories-6-img-wrapper:hover .hover-bar-horizontal {
   bottom: 0;
 }
-#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image:hover .hover-bg {
+#main-six-photos .s6pt-stories-1 .s6pt-stories-6-img-wrapper:hover .hover-bg {
   transition: all ease-in-out 1s;
 }
-#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image:hover .hover-div h3 {
+#main-six-photos .s6pt-stories-1 .s6pt-stories-6-img-wrapper:hover .hover-div h3 {
   opacity: 1;
 }
 #main-six-photos .s6pt-highlight-1 {
@@ -628,6 +628,7 @@ strong {
   font-size: 58px;
   line-height: 67px;
   color: #0072CE;
+  margin-bottom: 4rem;
 }
 #main-six-photos .s6pt-stories-6 .s6pt-stories-6-text {
   display: flex;
@@ -646,6 +647,84 @@ strong {
   height: 40%;
   width: auto;
   margin: 0 auto 2rem auto;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper {
+  position: relative;
+  height: 100%;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-div {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 45%;
+  padding: inherit;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-div .hover-div-content {
+  height: 100%;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-div .hover-div-content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-div h3 {
+  color: #FFFFFF;
+  font-family: "VeneerThree";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 136%;
+  z-index: 100;
+  opacity: 0;
+  text-align: left;
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-div p.author {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  z-index: 100;
+  opacity: 1;
+  text-align: left;
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-bar-vertical {
+  position: absolute;
+  right: calc(-1 * (100% - 9px));
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  bottom: 0;
+  transition: all ease-in-out 1s;
+  width: 100%;
+  padding: inherit;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-bar-vertical div.bar {
+  height: 100%;
+  width: 9px;
+  background-color: #F1C400;
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-bar-vertical div.hover-bg {
+  background-color: #0072CE;
+  opacity: 0.75;
+  z-index: 1;
+  transition: all ease-in-out 1s;
+  flex-grow: 1;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-bar-vertical {
+  right: 0;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-bg {
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-div h3 {
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------

@@ -607,7 +607,7 @@ strong {
       justify-content: center;
     }
 
-    .s6pt-stories-1-image {
+    .s6pt-stories-6-img-wrapper {
       position: relative;
       height: 100%;
       overflow: hidden;
@@ -645,7 +645,7 @@ strong {
       }
     }
 
-    .hover-bar {
+    .hover-bar-horizontal {
       position: absolute;
       right: 0;
       left: 0;
@@ -673,8 +673,8 @@ strong {
       }
     }
 
-    .s6pt-stories-1-image:hover {
-      .hover-bar {
+    .s6pt-stories-6-img-wrapper:hover {
+      .hover-bar-horizontal {
         bottom: 0;
       }
 
@@ -780,6 +780,7 @@ strong {
       font-size: 58px;
       line-height: 67px;
       color: $primary-blue;
+      margin-bottom: 4rem;
     }
 
     .s6pt-stories-6-text {
@@ -800,6 +801,101 @@ strong {
         height: 40%;
         width: auto;
         margin: 0 auto 2rem auto;
+      }
+    }
+
+    .s6pt-stories-6-img-wrapper {
+      position: relative;
+      height: 100%;
+
+      .hover-div {
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 45%;
+        padding: inherit;
+        display: flex;
+        flex-direction: column;
+        bottom: 0;
+
+
+        .hover-div-content {
+          height: 100%;
+        }
+
+        .hover-div-content-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        h3 {
+          color: $secondary-white;
+          font-family: $font-Veneer-Three;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 136%;
+          z-index: 100;
+          opacity: 0;
+          text-align: left;
+          transition: all ease-in-out 1s;
+        }
+
+        p.author {
+          color: $secondary-white;
+          font-size: 36px;
+          font-weight: lighter;
+          font-family: $font-roboto; // ???????
+          z-index: 100;
+          opacity: 1;
+          text-align: left;
+          transition: all ease-in-out 1s;
+        }
+      }
+
+      .hover-bar-vertical {
+        position: absolute;
+        right: calc(-1 * (100% - 9px));
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+        bottom: 0;
+        transition: all ease-in-out 1s;
+        width: 100%;
+        padding: inherit;
+
+        div.bar {
+          height: 100%;
+          width: 9px;
+          background-color: $secondary-yellow;
+          transition: all ease-in-out 1s;
+        }
+
+        div.hover-bg {
+          background-color: $primary-blue;
+          opacity: 0.75;
+          z-index: 1;
+          transition: all ease-in-out 1s;
+          flex-grow: 1;
+        }
+      }
+    }
+
+    .s6pt-stories-6-img-wrapper:hover {
+      .hover-bar-vertical {
+        right: 0;
+      }
+
+      .hover-bg {
+        transition: all ease-in-out 1s;
+      }
+
+      .hover-div {
+        h3 {
+          opacity: 1;
+        }
       }
     }
   }
