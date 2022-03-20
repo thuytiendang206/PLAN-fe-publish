@@ -113,6 +113,7 @@ p {
 
 .chevron-down {
   transition: all ease-in-out 0.5s;
+
   .scroll-down {
     font-size: 40px;
     display: inline-block;
@@ -1034,4 +1035,41 @@ strong {
 
 /*--------------------------------------------------------------
 # END SIX PHOTOS PAGE
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# HOME PAGE
+--------------------------------------------------------------*/
+
+#home-stories {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h1 {
+
+    }
+  }
+
+}
+
+#video-stories {
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# END HOME PAGE
 --------------------------------------------------------------*/
