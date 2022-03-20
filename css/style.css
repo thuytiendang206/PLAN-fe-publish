@@ -330,6 +330,8 @@ strong {
 .next-story div.next-story-content {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   margin: 5rem auto;
 }
 .next-story h2 {
@@ -467,6 +469,9 @@ strong {
 /*--------------------------------------------------------------
 # END TWO PHOTOS PAGE
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# SIX PHOTOS PAGE
+--------------------------------------------------------------*/
 #main-six-photos .s6pt-stories-1 h2 {
   font-family: "Veneer";
   font-style: normal;
@@ -474,6 +479,7 @@ strong {
   font-size: 64px;
   line-height: 77px;
   color: #0072CE;
+  margin-bottom: 4rem;
 }
 #main-six-photos .s6pt-stories-1 p {
   font-family: "Roboto", sans-serif;
@@ -490,6 +496,72 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+#main-six-photos .s6pt-stories-1 .hover-div {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: inherit;
+  padding: inherit;
+  display: flex;
+  flex-direction: column;
+}
+#main-six-photos .s6pt-stories-1 .hover-div .hover-div-content {
+  height: 100%;
+}
+#main-six-photos .s6pt-stories-1 .hover-div .hover-div-content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-six-photos .s6pt-stories-1 .hover-div h3 {
+  color: #FFFFFF;
+  font-size: 44px;
+  font-weight: normal;
+  font-family: "VeneerThree";
+  z-index: 100;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-1 .hover-bar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: calc(-1 * (100% - 9px));
+  padding: inherit;
+  height: 100%;
+  transition: all ease-in-out 1s;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+#main-six-photos .s6pt-stories-1 .hover-bar div.bar {
+  height: 9px;
+  width: 100%;
+  background-color: #F1C400;
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-1 .hover-bar div.hover-bg {
+  background-color: #0072CE;
+  opacity: 0.75;
+  z-index: 1;
+  transition: all ease-in-out 1s;
+  flex-grow: 1;
+}
+#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image:hover .hover-bar {
+  bottom: 0;
+}
+#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image:hover .hover-bg {
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-stories-1 .s6pt-stories-1-image:hover .hover-div h3 {
+  opacity: 1;
 }
 #main-six-photos .s6pt-highlight-1 {
   height: 100vh;
@@ -576,9 +648,6 @@ strong {
   margin: 0 auto 2rem auto;
 }
 
-/*--------------------------------------------------------------
-# SIX PHOTOS PAGE
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # END SIX PHOTOS PAGE
 --------------------------------------------------------------*/

@@ -397,6 +397,8 @@ strong {
   div.next-story-content {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     margin: 5rem auto;
   }
 
@@ -568,6 +570,11 @@ strong {
 /*--------------------------------------------------------------
 # END TWO PHOTOS PAGE
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# SIX PHOTOS PAGE
+--------------------------------------------------------------*/
+
 #main-six-photos {
   .s6pt-stories-1 {
 
@@ -578,6 +585,7 @@ strong {
       font-size: 64px;
       line-height: 77px;
       color: $primary-blue;
+      margin-bottom: 4rem;
     }
 
     p {
@@ -598,6 +606,88 @@ strong {
       flex-direction: column;
       justify-content: center;
     }
+
+    .s6pt-stories-1-image {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hover-div {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      height: inherit;
+      padding: inherit;
+      display: flex;
+      flex-direction: column;
+
+
+      .hover-div-content {
+        height: 100%;
+      }
+
+      .hover-div-content-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h3 {
+        color: $secondary-white;
+        font-size: 44px;
+        font-weight: normal;
+        font-family: $font-Veneer-Three;
+        z-index: 100;
+        opacity: 0;
+        transition: all ease-in-out 1s;
+      }
+    }
+
+    .hover-bar {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: calc(-1 * (100% - 9px));
+      padding: inherit;
+      height: 100%;
+      transition: all ease-in-out 1s;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+
+      div.bar {
+        height: 9px;
+        width: 100%;
+        background-color: $secondary-yellow;
+        transition: all ease-in-out 1s;
+      }
+
+      div.hover-bg {
+        background-color: $primary-blue;
+        opacity: 0.75;
+        z-index: 1;
+        transition: all ease-in-out 1s;
+        flex-grow: 1;
+      }
+    }
+
+    .s6pt-stories-1-image:hover {
+      .hover-bar {
+        bottom: 0;
+      }
+
+      .hover-bg {
+        transition: all ease-in-out 1s;
+      }
+
+      .hover-div {
+        h3 {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   .s6pt-highlight-1 {
@@ -610,7 +700,6 @@ strong {
   }
 
   .s6pt-stories-2 {
-
     p {
       font-family: $font-arial;
       font-style: normal;
@@ -715,10 +804,6 @@ strong {
     }
   }
 }
-
-/*--------------------------------------------------------------
-# SIX PHOTOS PAGE
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # END SIX PHOTOS PAGE
