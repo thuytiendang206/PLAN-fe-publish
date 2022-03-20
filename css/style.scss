@@ -4,6 +4,7 @@ $secondary-white: #FFFFFF;
 $secondary-black: #000000;
 $secondary-black-blue: #243C4B;
 $secondary-yellow: #F1C400;
+$secondary-light-blue: #58CAE7;
 
 
 @font-face {
@@ -86,6 +87,14 @@ p {
 
 .bg-blue {
   background-color: $primary-blue !important;
+}
+
+.bg-yellow {
+  background-color: $secondary-yellow !important;
+}
+
+.bg-light-blue {
+  background-color: $secondary-light-blue !important;
 }
 
 .btn.btn-yellow {
@@ -741,7 +750,61 @@ strong {
   }
 
   .s6pt-highlight-3 {
+    position: relative;
 
+    .bar {
+      width: 50%;
+      height: 20px;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .s6pt-highlight-3-text-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .s6pt-highlight-3-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 67px;
+        color: $secondary-yellow;
+        margin-bottom: 4rem;
+      }
+
+      p {
+        font-family: $font-arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $secondary-white;
+      }
+
+      p.title-yellow {
+        color: $secondary-yellow;
+      }
+    }
   }
 
   .s6pt-stories-4 {
@@ -752,6 +815,29 @@ strong {
       font-size: 24px;
       line-height: 28px;
       color: $secondary-black;
+    }
+  }
+
+  .s6pt-highlight-4 {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      transition: all ease-in-out 1s;
+    }
+
+    .img-hover:hover {
+      transform: scale(1.1);
+    }
+
+    .bar-100 {
+      width: 100%;
+      height: 20px;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
     }
   }
 
@@ -848,7 +934,7 @@ strong {
           font-weight: lighter;
           font-family: $font-roboto; // ???????
           z-index: 100;
-          opacity: 1;
+          opacity: 0;
           text-align: left;
           transition: all ease-in-out 1s;
         }
@@ -893,7 +979,7 @@ strong {
       }
 
       .hover-div {
-        h3 {
+        h3, p.author {
           opacity: 1;
         }
       }

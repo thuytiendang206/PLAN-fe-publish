@@ -70,6 +70,14 @@ p {
   background-color: #0072CE !important;
 }
 
+.bg-yellow {
+  background-color: #F1C400 !important;
+}
+
+.bg-light-blue {
+  background-color: #58CAE7 !important;
+}
+
 .btn.btn-yellow {
   background: #F1C400;
   color: #243C4B;
@@ -602,6 +610,55 @@ strong {
   line-height: 28px;
   color: #000000;
 }
+#main-six-photos .s6pt-highlight-3 {
+  position: relative;
+}
+#main-six-photos .s6pt-highlight-3 .bar {
+  width: 50%;
+  height: 20px;
+}
+#main-six-photos .s6pt-highlight-3 .top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#main-six-photos .s6pt-highlight-3 .bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#main-six-photos .s6pt-highlight-3 .s6pt-highlight-3-text-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#main-six-photos .s6pt-highlight-3 .s6pt-highlight-3-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-six-photos .s6pt-highlight-3 .s6pt-highlight-3-text h2 {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 67px;
+  color: #F1C400;
+  margin-bottom: 4rem;
+}
+#main-six-photos .s6pt-highlight-3 .s6pt-highlight-3-text p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+#main-six-photos .s6pt-highlight-3 .s6pt-highlight-3-text p.title-yellow {
+  color: #F1C400;
+}
 #main-six-photos .s6pt-stories-4 .s6pt-stories-4-text p {
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -609,6 +666,24 @@ strong {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+}
+#main-six-photos .s6pt-highlight-4 {
+  position: relative;
+  overflow: hidden;
+}
+#main-six-photos .s6pt-highlight-4 img {
+  transition: all ease-in-out 1s;
+}
+#main-six-photos .s6pt-highlight-4 .img-hover:hover {
+  transform: scale(1.1);
+}
+#main-six-photos .s6pt-highlight-4 .bar-100 {
+  width: 100%;
+  height: 20px;
+}
+#main-six-photos .s6pt-highlight-4 .bottom {
+  position: absolute;
+  bottom: 0;
 }
 #main-six-photos .s6pt-stories-5 .s6pt-stories-5-text p {
   font-family: "Arial", sans-serif;
@@ -688,7 +763,7 @@ strong {
   font-weight: lighter;
   font-family: "Roboto", sans-serif;
   z-index: 100;
-  opacity: 1;
+  opacity: 0;
   text-align: left;
   transition: all ease-in-out 1s;
 }
@@ -723,7 +798,7 @@ strong {
 #main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-bg {
   transition: all ease-in-out 1s;
 }
-#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-div h3 {
+#main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-div h3, #main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper:hover .hover-div p.author {
   opacity: 1;
 }
 
