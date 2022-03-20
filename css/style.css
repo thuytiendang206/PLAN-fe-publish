@@ -91,6 +91,9 @@ p {
   transition: all 0.5s;
 }
 
+.chevron-down {
+  transition: all ease-in-out 0.5s;
+}
 .chevron-down .scroll-down {
   font-size: 40px;
   display: inline-block;
@@ -107,6 +110,13 @@ p {
   box-sizing: border-box;
   border-radius: 50%;
   padding: 5px;
+  transition: all ease-in-out 0.5s;
+}
+
+.chevron-down:hover .bi-chevron-down::before {
+  color: #0072CE;
+  background-color: #FFFFFF;
+  transition: all ease-in-out 0.5s;
 }
 
 strong {
@@ -480,6 +490,15 @@ strong {
 /*--------------------------------------------------------------
 # SIX PHOTOS PAGE
 --------------------------------------------------------------*/
+#main-six-photos .quote .author {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30.1713px;
+  line-height: 35px;
+  color: #0072CE;
+  text-align: right;
+}
 #main-six-photos .s6pt-stories-1 h2 {
   font-family: "Veneer";
   font-style: normal;
