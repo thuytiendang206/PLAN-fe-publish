@@ -850,6 +850,80 @@ strong {
   justify-content: center;
   height: 100%;
 }
+.main-home-stories .filter-section .filter-n-search .filter-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.main-home-stories .filter-section .filter-n-search h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #0072CE;
+  padding-right: 2rem;
+}
+.main-home-stories .filter-section .filter-n-search form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.main-home-stories .filter-section .filter-n-search form select {
+  max-width: 200px;
+  border: 1px dashed #0072CE;
+  box-sizing: border-box;
+  border-radius: 9px;
+  margin-right: 1.5rem;
+  box-shadow: none;
+}
+.main-home-stories .filter-section .filter-n-search form .form-btn {
+  align-items: center;
+}
+.main-home-stories .filter-section .filter-n-search form .form-btn a {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #243C4B;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 38px;
+}
+.main-home-stories .filter-section .filter-n-search form .form-btn a.btn-apply {
+  background-color: #F1C400;
+  border-color: #F1C400;
+  border-radius: 9px 0 0 9px;
+}
+.main-home-stories .filter-section .filter-n-search form .form-btn a.btn-reset {
+  background: #EBEBEB;
+  border-color: #EBEBEB;
+  border-radius: 0 9px 9px 0;
+}
+.main-home-stories .filter-section .filter-n-search .search-wrapper .search {
+  height: 100%;
+  border: 1px dashed #0072CE;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+.main-home-stories .filter-section .filter-n-search .search-wrapper input {
+  border-radius: 9px;
+  border: none;
+}
+.main-home-stories .filter-section .filter-n-search .search-wrapper .search-icon {
+  border-radius: 0 9px 9px 0;
+  border: none;
+  background: #F1C400;
+  padding: 0 1rem;
+}
+.main-home-stories .filter-section .under-line {
+  height: 4px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
 .story-card-item .story-card {
   position: relative;
   overflow: hidden;

@@ -1054,6 +1054,104 @@ strong {
   }
 }
 
+.main-home-stories {
+  .filter-section {
+    .filter-n-search {
+      .filter-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
+
+      h2 {
+        font-family: $font-veneer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        color: $primary-blue;
+
+        padding-right: 2rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        select {
+          max-width: 200px;
+          border: 1px dashed $primary-blue;
+          box-sizing: border-box;
+          border-radius: 9px;
+          margin-right: 1.5rem;
+          box-shadow: none;
+        }
+
+        .form-btn {
+          align-items: center;
+
+          a {
+            font-family: $font-veneer;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: $secondary-black-blue;
+
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 38px;
+          }
+
+          a.btn-apply {
+            background-color: $secondary-yellow;
+            border-color: $secondary-yellow;
+            border-radius: 9px 0 0 9px;
+
+          }
+
+          a.btn-reset {
+            background: #EBEBEB;
+            border-color: #EBEBEB;
+            border-radius: 0 9px 9px 0;
+          }
+
+        }
+      }
+
+      .search-wrapper {
+        .search {
+          height: 100%;
+
+          border: 1px dashed $primary-blue;
+          box-sizing: border-box;
+          border-radius: 9px;
+        }
+
+        input {
+          border-radius: 9px;
+          border: none;
+        }
+
+        .search-icon{
+          border-radius: 0 9px 9px 0;
+          border: none;
+          background: $secondary-yellow;
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    .under-line {
+      height: 4px;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+}
+
 
 .story-card-item {
 
