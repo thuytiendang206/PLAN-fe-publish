@@ -850,6 +850,9 @@ strong {
   justify-content: center;
   height: 100%;
 }
+.main-home-stories {
+  margin-bottom: 8.5rem;
+}
 .main-home-stories .filter-section .filter-n-search .filter-wrapper {
   display: flex;
   flex-direction: row;
@@ -1022,11 +1025,21 @@ strong {
   display: none;
 }
 
+#video-stories h2 {
+  font-family: "Veneer";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  color: #0072CE;
+  margin-bottom: 6rem;
+}
 #video-stories .video-container {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   height: 0;
+  margin-bottom: 2rem;
 }
 #video-stories .video-container iframe {
   position: absolute;

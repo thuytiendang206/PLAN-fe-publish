@@ -1055,6 +1055,8 @@ strong {
 }
 
 .main-home-stories {
+  margin-bottom: 8.5rem;
+  
   .filter-section {
     .filter-n-search {
       .filter-wrapper {
@@ -1135,7 +1137,7 @@ strong {
           border: none;
         }
 
-        .search-icon{
+        .search-icon {
           border-radius: 0 9px 9px 0;
           border: none;
           background: $secondary-yellow;
@@ -1277,10 +1279,21 @@ strong {
 
 
 #video-stories {
+  h2 {
+    font-family: $font-veneer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    color: #0072CE;
+    margin-bottom: 6rem;
+  }
+
   .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    margin-bottom: 2rem;
   }
 
   .video-container iframe {
