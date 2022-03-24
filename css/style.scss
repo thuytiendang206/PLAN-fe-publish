@@ -260,8 +260,11 @@ strong {
   background-color: $primary-blue;
   position: relative;
   padding-top: 4rem;
+  overflow: hidden;
 
   section.hero-section {
+    height: 100%;
+    display: flex;
     img {
       max-height: 162px;
       width: fit-content;
@@ -280,15 +283,22 @@ strong {
 
     h1 {
       color: $primary-blue;
+      line-height: 120px;
     }
 
     h1 > span {
       background-color: $secondary-white;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      line-height: 50px;
+      padding: 0 1rem;
     }
 
     .chevron-down {
-      position: absolute;
-      bottom: 10px;
+      height: fit-content;
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: 1rem;
     }
   }
 }

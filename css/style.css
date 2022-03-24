@@ -215,6 +215,11 @@ strong {
   background-color: #0072CE;
   position: relative;
   padding-top: 4rem;
+  overflow: hidden;
+}
+#first-page-photo section.hero-section {
+  height: 100%;
+  display: flex;
 }
 #first-page-photo section.hero-section img {
   max-height: 162px;
@@ -232,13 +237,20 @@ strong {
 }
 #first-page-photo section.hero-section h1 {
   color: #0072CE;
+  line-height: 120px;
 }
 #first-page-photo section.hero-section h1 > span {
   background-color: #FFFFFF;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  line-height: 50px;
+  padding: 0 1rem;
 }
 #first-page-photo section.hero-section .chevron-down {
-  position: absolute;
-  bottom: 10px;
+  height: fit-content;
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 1rem;
 }
 
 .statistic-section {
