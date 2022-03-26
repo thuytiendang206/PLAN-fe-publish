@@ -55,5 +55,22 @@
 
 $(document).ready(function () {
     'use strict';
+    $('.faux-select').click(function(){
+        $(this).toggleClass('open');
+        $('.options',this).toggleClass('open');
+    });
 
+    $('.options-country li').click(function(){
+        var selection = $(this).text();
+        var dataValue = $(this).attr('data-value');
+        $('.country-select .selected-option span').text(selection);
+        $('.country-select').attr('data-selected-value',dataValue);
+    });
+
+    $('.options-theme li').click(function(){
+        var selection = $(this).text();
+        var dataValue = $(this).attr('data-value');
+        $('.theme-select .selected-option span').text(selection);
+        $('.theme-select').attr('data-selected-value',dataValue);
+    });
 })

@@ -66,18 +66,30 @@
                         <div class="filter-wrapper col-md-8">
                             <h2>FILTERS:</h2>
                             <form>
-                                <select class="form-select" aria-label="Country">
-                                    <option value="thailand" selected>Thailand</option>
-                                    <option value="vietnam">Vietnam</option>
-                                    <option value="laos">Laos</option>
-                                    <option value="india">India</option>
-                                </select>
-                                <select class="form-select" aria-label="Theme">
-                                    <option value="thailand" selected>Thailand</option>
-                                    <option value="vietnam">Vietnam</option>
-                                    <option value="laos">Laos</option>
-                                    <option value="india">India</option>
-                                </select>
+                                <ul class="faux-select country-select" data-selected-value="no-option">
+                                    <li class="selected-option"><span>COUNTRY</span>
+                                        <ul class="options-country options ">
+                                            <li data-value="thailand"><p class="text">Thailand</p><p class="number">1</p></li>
+                                            <li data-value="vietnam"><p class="text">Vietnam</p><p class="number">23</p></li>
+                                            <li data-value="laos">Laos</li>
+                                            <li data-value="india">India</li>
+                                            <li data-value="lily">Lily</li>
+                                            <li data-value="robin">Robin</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="faux-select theme-select" data-selected-value="no-option">
+                                    <li class="selected-option"><span>THEME</span>
+                                        <ul class="options-theme options">
+                                            <li data-value="thailand">Thailand</li>
+                                            <li data-value="vietnam">Vietnam</li>
+                                            <li data-value="laos">Laos</li>
+                                            <li data-value="india">India</li>
+                                            <li data-value="lily">Lily</li>
+                                            <li data-value="robin">Robin</li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 <div class="form-btn btn-group">
                                     <a href="#" class="btn-apply btn btn-primary active">Apply</a>
                                     <a href="#" class="btn-reset btn btn-secondary">Reset</a>
@@ -449,6 +461,13 @@
     </div>
     <!-- ======= End Main Home-Stories  ======= -->
 
+    <!-- Vendor JS Files -->
+    <script type='text/javascript' src='js/jquery.3.5.1.min.js'></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

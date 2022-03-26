@@ -509,6 +509,9 @@ strong {
   opacity: 1;
   height: 100%;
 }
+.story-card-item .story-card:hover {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+}
 .story-card-item .story-card:hover .card-img-hover {
   left: 100%;
   opacity: 0;
@@ -992,6 +995,7 @@ strong {
   line-height: 48px;
   color: #0072CE;
   padding-right: 2rem;
+  margin: 0;
 }
 .main-home-stories .filter-section .filter-n-search form {
   display: flex;
@@ -999,13 +1003,99 @@ strong {
   justify-content: space-between;
   flex-grow: 1;
 }
-.main-home-stories .filter-section .filter-n-search form select {
-  max-width: 200px;
+.main-home-stories .filter-section .filter-n-search form .faux-select {
+  list-style-type: none;
+  padding: 0.4em 0;
+  background: #FFFFFF;
+  color: #0072CE;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  width: 200px;
   border: 1px dashed #0072CE;
   box-sizing: border-box;
   border-radius: 9px;
-  margin-right: 1.5rem;
   box-shadow: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li {
+  padding: 0;
+  text-indent: 1em;
+  position: relative;
+  flex-grow: 1;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li .options {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0.4em 0 0 0;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  border: 3px solid transparent;
+  top: 1.2em;
+  left: -0.2em;
+  transition: all ease 0.25s;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li .options li {
+  padding: 0.4em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #0072CE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li .options li p {
+  margin: 0;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li .options li p.number {
+  margin-right: 0.7rem;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li .options li:hover {
+  background-color: rgba(64, 60, 67, 0.16);
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select li .options.open {
+  transition: all ease 0.25s;
+  color: #0072CE;
+  background: #FFFFFF;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
+  max-height: 180px;
+  overflow: scroll;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select .selected-option span {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0072CE;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.8em solid #0072CE;
+  position: absolute;
+  right: 1em;
+  transition: all ease 0.5s;
+}
+.main-home-stories .filter-section .filter-n-search form .faux-select.open:before {
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.8em solid #0072CE;
+  border-top: 0;
 }
 .main-home-stories .filter-section .filter-n-search form .form-btn {
   align-items: center;

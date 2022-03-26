@@ -495,7 +495,7 @@ strong {
 }
 
 .odd-col {
- margin-top: 6.5rem;
+  margin-top: 6.5rem;
 }
 
 
@@ -600,6 +600,8 @@ strong {
   }
 
   .story-card:hover {
+    box-shadow: 0 6px 6px rgb(0 0 0 / 25%);
+
     .card-img-hover {
       left: 100%;
       opacity: 0;
@@ -1222,6 +1224,7 @@ strong {
         color: $primary-blue;
 
         padding-right: 2rem;
+        margin: 0;
       }
 
       form {
@@ -1230,13 +1233,112 @@ strong {
         justify-content: space-between;
         flex-grow: 1;
 
-        select {
-          max-width: 200px;
+        .faux-select {
+          list-style-type: none;
+          padding: 0.4em 0;
+          background: $secondary-white;
+          color: $primary-blue;
+          text-align: left;
+          cursor: pointer;
+          position: relative;
+          width: 200px;
           border: 1px dashed $primary-blue;
           box-sizing: border-box;
           border-radius: 9px;
-          margin-right: 1.5rem;
           box-shadow: none;
+          margin: 0;
+          display: flex;
+          align-items: center;
+
+          li {
+            padding: 0;
+            text-indent: 1em;
+            position: relative;
+            flex-grow: 1;
+
+            .options {
+              display: block;
+              list-style-type: none;
+              padding: 0;
+              margin: 0.4em 0 0 0;
+              background: transparent;
+              position: absolute;
+              width: 100%;
+              max-height: 0;
+              overflow: hidden;
+              border: 3px solid transparent;
+              top: 1.2em;
+              left: -0.2em;
+              transition: all ease 0.25s;
+
+              li {
+                padding: 0.4em 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+                font-family: $font-roboto;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 25px;
+                color: $primary-blue;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+
+                p {
+                  margin: 0;
+                }
+
+                p.number {
+                  margin-right: 0.7rem;
+                }
+              }
+
+              li:hover {
+                background-color: rgb(64 60 67 / 16%);
+              }
+            }
+
+            .options.open {
+              transition: all ease 0.25s;
+              color: $primary-blue;
+              background: $secondary-white;
+              box-shadow: 0 3px 2px rgb(0 0 0 / 15%);
+              max-height: 180px;
+              overflow: scroll;
+            }
+          }
+
+          .selected-option span {
+            font-family: $font-arial;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: $primary-blue;
+          }
+
+          &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 0.5em solid transparent;
+            border-right: 0.5em solid transparent;
+            border-top: 0.8em solid $primary-blue;
+            position: absolute;
+            right: 1em;
+            transition: all ease 0.5s;
+          }
+        }
+
+        .faux-select.open {
+          &:before {
+            border-left: 0.5em solid transparent;
+            border-right: 0.5em solid transparent;
+            border-bottom: 0.8em solid $primary-blue;
+            border-top: 0;
+          }
         }
 
         .form-btn {
@@ -1316,6 +1418,7 @@ strong {
     .story-card-item {
       padding-right: calc(var(--bs-gutter-x) * .5);
       padding-left: calc(var(--bs-gutter-x) * .5);
+
       .card-text {
         h3 {
           color: $secondary-white;
