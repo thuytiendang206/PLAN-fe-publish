@@ -1191,6 +1191,173 @@ strong {
 /*--------------------------------------------------------------
 # HOME PAGE
 --------------------------------------------------------------*/
+#header.home-header {
+  .navbar {
+    #menu-label {
+      color: $primary-blue;
+    }
+  }
+}
+
+#home-page {
+  p {
+    margin: 0;
+  }
+
+  .page-1 {
+    background-color: $primary-blue;
+
+    .text-wrapper {
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    p {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8rem;
+      color: $secondary-white;
+      margin: 0;
+      line-height: 1;
+      display: flex;
+
+      span {
+        margin: 0 1rem;
+        padding: 0 1rem;
+        background: url("../images/act_bg.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+
+    .louder-than-words {
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .louder-than {
+      display: inline-flex;
+      align-items: flex-end;
+
+      h2 {
+        font-family: $font-veneer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14rem;
+        text-align: center;
+        color: $secondary-white;
+        line-height: 1;
+        margin: 0;
+      }
+
+      p {
+        font-size: 7.5rem;
+        margin: 0;
+        line-height: 1.25;
+        padding: 0 2rem;
+      }
+    }
+
+    h1 {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22rem;
+      color: $secondary-white;
+      margin: 0;
+      line-height: 0.9;
+    }
+  }
+
+  .page-2 {
+    p {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 140%;
+      color: $secondary-black-blue;
+      margin: 0;
+    }
+
+    p.first-line {
+      font-weight: 400;
+      font-size: 94px;
+      line-height: 113px;
+    }
+  }
+
+  .page-3 {
+    img {
+      max-width: 13rem;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .text {
+      p {
+        font-family: $font-veneer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 124px;
+        line-height: 149px;
+        text-align: center;
+        color: $secondary-white;
+      }
+    }
+  }
+
+  .page-4 {
+    video {
+      display: none;
+    }
+
+    .part-2 {
+      display: none;
+    }
+
+    p {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 120px;
+      text-align: center;
+      color: $secondary-black-blue;
+      margin: 0;
+    }
+  }
+
+  .page-5 {
+    p {
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 120%;
+      color: $secondary-white;
+    }
+    .last-line{
+      margin-right: 11rem;
+    }
+  }
+  .page-6{
+    p{
+      font-family: $font-veneer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 123px;
+      text-align: center;
+      color: $secondary-white;
+    }
+    .first-line{
+      font-weight: 400;
+      font-size: 124px;
+      line-height: 149px;
+    }
+  }
+}
 
 #home-stories {
   .hero-section {
