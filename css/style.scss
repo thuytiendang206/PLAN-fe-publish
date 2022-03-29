@@ -1,3 +1,4 @@
+@use 'sass:math';
 $primary-blue: #0072CE;
 $primary-orange: #E17800;
 $secondary-white: #FFFFFF;
@@ -1199,6 +1200,123 @@ strong {
   }
 }
 
+ // FULLPAGE & FADEIN
+.fullpage-wrapper {
+  width: 100% !important;
+  transform: none !important;
+
+  .fp-section {
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+    }
+
+    width: 100% !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: all .7s ease-in-out;
+
+    .fp-slidesContainer {
+      width: 100% !important;
+      transform: none !important;
+
+      .fp-slide {
+        &.active {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+        }
+
+        width: 100% !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+        transition: all .7s ease-in-out;
+      }
+    }
+  }
+}
+
+// vertical carousel animation
+$animation-timing: 16s;
+$carousel-items: 6;
+$animation-delay-fraction: math.div($animation-timing, $carousel-items);
+$animation-steps-fraction: 100 / $carousel-items;
+$slide-change-timing: 3; // percentage of total animation cycle
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  padding: 0 12px;
+  opacity: 0;
+  filter: drop-shadow(0 2px 2px #555);
+  will-change: transform, opacity;
+  animation: carousel-animate-vertical $animation-timing linear infinite;
+}
+
+ @for $i from 1 through ($carousel-items) {
+   .carousel__item:nth-child(#{$i}) {
+     animation-delay: calc(#{$animation-delay-fraction} * #{$i - 1});
+   }
+ }
+
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  #{$slide-change-timing}%, #{$animation-steps-fraction}% {
+    transform: translateY(90%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
+  #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
+    transform: translateY(-90%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
+
+  #{($animation-steps-fraction * 3) + $slide-change-timing}% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
 #home-page {
   p {
     margin: 0;
@@ -1288,6 +1406,9 @@ strong {
   }
 
   .page-3 {
+    .page-3-wrapper{
+      height: 100%;
+    }
     img {
       max-width: 13rem;
       height: auto;
@@ -1337,12 +1458,14 @@ strong {
       line-height: 120%;
       color: $secondary-white;
     }
-    .last-line{
+
+    .last-line {
       margin-right: 11rem;
     }
   }
-  .page-6{
-    p{
+
+  .page-6 {
+    p {
       font-family: $font-veneer;
       font-style: normal;
       font-weight: 400;
@@ -1351,7 +1474,8 @@ strong {
       text-align: center;
       color: $secondary-white;
     }
-    .first-line{
+
+    .first-line {
       font-weight: 400;
       font-size: 124px;
       line-height: 149px;
