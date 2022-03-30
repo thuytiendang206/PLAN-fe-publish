@@ -1000,9 +1000,12 @@ strong {
 }
 #home-page .page-1 p span {
   margin: 0 1rem;
-  padding: 0 1rem;
   background: url("../images/act_bg.svg") no-repeat center;
+  opacity: 1;
+  padding: 0 1rem;
+  width: inherit;
   background-size: cover;
+  transition: all 2s ease-in-out;
 }
 #home-page .page-1 .louder-than-words {
   margin: 0 auto;
@@ -1366,6 +1369,56 @@ strong {
   visibility: visible;
   opacity: 1;
   z-index: 1;
+}
+
+.zoomTopToBottom {
+  animation-name: zoomTopToBottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+/* zoomInLeft animation keyframes */
+@keyframes zoomTopToBottom {
+  from {
+    transform: scale(1.5) translateY(-100%);
+    opacity: 0;
+  }
+}
+.act {
+  animation-name: backgroundCover;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 3.5s;
+}
+
+@keyframes backgroundCover {
+  from {
+    width: 0;
+    background-size: 0;
+  }
+}
+.zoomInLeft {
+  animation-name: zoomInLeft;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+/* zoomInLeft animation keyframes */
+@keyframes zoomInLeft {
+  from {
+    transform: scale(5) translateX(20%);
+    opacity: 0;
+  }
+}
+.page-1 .louder-than-words h2.zoomInLeft {
+  animation-delay: 0s;
+}
+.page-1 .louder-than-words p {
+  animation-delay: 1s;
+}
+.page-1 .louder-than-words h1 {
+  animation-delay: 2s;
 }
 
 .carousel {
