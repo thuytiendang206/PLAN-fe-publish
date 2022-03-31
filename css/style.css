@@ -129,20 +129,21 @@ strong {
 .quote .quote-text-wrapper {
   position: relative;
 }
-.quote p.quote-text > span {
+.quote p.quote-text {
   position: relative;
+  display: inline;
 }
 .quote p.quote-text:before {
-  width: 100%;
   z-index: -1;
   position: absolute;
-  left: -14%;
-  top: -17%;
+  left: -58px;
+  top: -63px;
 }
 .quote p.quote-text:after {
-  width: 100%;
   z-index: -1;
   position: absolute;
+  bottom: -81px;
+  right: -97px;
 }
 .quote p.quote-yellow:before {
   content: url("../images/open-quote-yellow.svg");
