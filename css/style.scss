@@ -157,22 +157,23 @@ strong {
     position: relative;
   }
 
-  p.quote-text > span {
+  p.quote-text {
     position: relative;
+    display: inline;
   }
 
   p.quote-text:before {
-    width: 100%;
     z-index: -1;
     position: absolute;
-    left: -14%;
-    top: -17%;
+    left: -58px;
+    top: -63px;
   }
 
   p.quote-text:after {
-    width: 100%;
     z-index: -1;
     position: absolute;
+    bottom: -81px;
+    right: -97px;
   }
 
   p.quote-yellow:before {
@@ -1754,7 +1755,7 @@ strong {
 $animation-timing: 16s;
 $carousel-items: 6;
 $animation-delay-fraction: math.div($animation-timing, $carousel-items);
-$animation-steps-fraction: 100 / $carousel-items;
+$animation-steps-fraction: math.div(100, $carousel-items);
 $slide-change-timing: 3; // percentage of total animation cycle
 
 
