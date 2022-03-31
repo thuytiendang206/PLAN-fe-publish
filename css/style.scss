@@ -1645,7 +1645,7 @@ strong {
 /*--------------------------------------------------------------
 # ANIMATION
 --------------------------------------------------------------*/
-// FULLPAGE & FADEIN
+/*=== FULL PAGE & FADE IN ===*/
 .fullpage-wrapper {
   width: 100% !important;
   transform: none !important;
@@ -1690,8 +1690,7 @@ strong {
   }
 }
 
-
-// ZOOM TOP TO BOTTOM
+/*=== ZOOM TOP TO BOTTOM ===*/
 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
   animation-duration: 1s;
@@ -1699,7 +1698,6 @@ strong {
   animation-delay: 3s;
 }
 
-/* zoomInLeft animation keyframes */
 @keyframes zoomTopToBottom {
   from {
     transform: scale(1.5) translateY(-100%);
@@ -1707,7 +1705,7 @@ strong {
   }
 }
 
-// ACT
+/*=== ACT BACKGROUND ANIMATION ===*/
 .act {
   animation-name: backgroundCover;
   animation-duration: 1s;
@@ -1722,14 +1720,13 @@ strong {
   }
 }
 
-// ZOOM RIGHT TO LEFT
+/*=== ZOOM RIGHT TO LEFT ===*/
 .zoomInLeft {
   animation-name: zoomInLeft;
   animation-duration: 1.5s;
   animation-fill-mode: both;
 }
 
-/* zoomInLeft animation keyframes */
 @keyframes zoomInLeft {
   from {
     transform: scale(5) translateX(20%);
@@ -1751,12 +1748,12 @@ strong {
 }
 
 
-// vertical carousel animation
+/*=== VERTICAL CAROUSEL ANIMATION ===*/
 $animation-timing: 16s;
 $carousel-items: 6;
 $animation-delay-fraction: math.div($animation-timing, $carousel-items);
 $animation-steps-fraction: math.div(100, $carousel-items);
-$slide-change-timing: 3; // percentage of total animation cycle
+$slide-change-timing: 3;   // percentage of total animation cycle
 
 
 .carousel {

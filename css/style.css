@@ -1333,6 +1333,7 @@ strong {
 /*--------------------------------------------------------------
 # ANIMATION
 --------------------------------------------------------------*/
+/*=== FULL PAGE & FADE IN ===*/
 .fullpage-wrapper {
   width: 100% !important;
   transform: none !important;
@@ -1372,6 +1373,7 @@ strong {
   z-index: 1;
 }
 
+/*=== ZOOM TOP TO BOTTOM ===*/
 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
   animation-duration: 1s;
@@ -1379,13 +1381,13 @@ strong {
   animation-delay: 3s;
 }
 
-/* zoomInLeft animation keyframes */
 @keyframes zoomTopToBottom {
   from {
     transform: scale(1.5) translateY(-100%);
     opacity: 0;
   }
 }
+/*=== ACT BACKGROUND ANIMATION ===*/
 .act {
   animation-name: backgroundCover;
   animation-duration: 1s;
@@ -1399,13 +1401,13 @@ strong {
     background-size: 0;
   }
 }
+/*=== ZOOM RIGHT TO LEFT ===*/
 .zoomInLeft {
   animation-name: zoomInLeft;
   animation-duration: 1.5s;
   animation-fill-mode: both;
 }
 
-/* zoomInLeft animation keyframes */
 @keyframes zoomInLeft {
   from {
     transform: scale(5) translateX(20%);
@@ -1422,6 +1424,7 @@ strong {
   animation-delay: 2s;
 }
 
+/*=== VERTICAL CAROUSEL ANIMATION ===*/
 .carousel {
   position: relative;
   width: 100%;
