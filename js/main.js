@@ -74,6 +74,13 @@ $(document).ready(function () {
         $('.theme-select').attr('data-selected-value', dataValue);
     });
 
+    // Set height of a div based on a percentage of width
+    $(function() {
+        var div = $('.story-card-item');
+        var width = div.width();
+        div.css('height', width*1.21068);  //magic number from percentage width/ height of image background
+    });
+
     $('#home-page').fullpage();
 
     AOS.init({

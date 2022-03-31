@@ -422,7 +422,7 @@ strong {
 }
 
 .story-card-item {
-  height: 410px;
+  min-height: 400px;
   padding: 0.5rem 0;
 }
 .story-card-item .story-card {
