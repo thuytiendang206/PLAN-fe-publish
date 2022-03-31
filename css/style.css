@@ -1424,6 +1424,25 @@ strong {
   animation-delay: 2s;
 }
 
+/*=== PULSE FOR CHEVRON-DOWN ===*/
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
 /*=== VERTICAL CAROUSEL ANIMATION ===*/
 .carousel {
   position: relative;
