@@ -1,4 +1,5 @@
 @use 'sass:math';
+
 $primary-blue: #0072CE;
 $primary-orange: #E17800;
 $secondary-white: #FFFFFF;
@@ -502,7 +503,7 @@ strong {
 
 
 .story-card-item {
-  height: 500px;
+  height: 410px;
   padding: 0.5rem 0;
 
   .story-card {
@@ -550,8 +551,9 @@ strong {
       line-height: 129%;
       color: $primary-blue;
       opacity: 0;
-      transition: all ease-in-out 1s;
+      transition: all ease-in-out 0.5s;
       flex-grow: 1;
+      margin: 0;
     }
 
     div.country {
@@ -559,7 +561,12 @@ strong {
       width: fit-content;
       z-index: 200;
       padding: 0.5rem;
-      margin: 2rem 0 0 auto;
+      margin: 0 0 0 auto;
+      opacity: 1;
+      transition: all ease-in-out 0.5s;
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
 
       p {
         font-family: $font-veneer;
@@ -579,7 +586,7 @@ strong {
     width: 100%;
     height: 100%;
     left: 0;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out 0.7s;
     z-index: 1;
   }
 
@@ -631,6 +638,10 @@ strong {
 
       i.original {
         display: none;
+      }
+
+      div.country {
+        opacity: 0;
       }
     }
   }
@@ -1293,9 +1304,10 @@ strong {
   }
 
   .page-3 {
-    .page-3-wrapper{
+    .page-3-wrapper {
       height: 100%;
     }
+
     img {
       max-width: 13rem;
       height: auto;
@@ -1714,7 +1726,7 @@ strong {
 }
 
 @keyframes backgroundCover {
-  from{
+  from {
     width: 0;
     background-size: 0;
   }
@@ -1733,35 +1745,38 @@ strong {
     opacity: 0;
   }
 }
+
 .page-1 {
   .louder-than-words {
     h2.zoomInLeft {
-      animation-delay:0s;
+      animation-delay: 0s;
     }
+
     p {
-      animation-delay:1s;
+      animation-delay: 1s;
     }
+
     h1 {
-      animation-delay:2s;
+      animation-delay: 2s;
     }
   }
 }
 
 /*=== PULSE FOR CHEVRON-DOWN ===*/
-.pulse-animation{
+.pulse-animation {
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0%{
+  0% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-  50%{
+  50% {
     -webkit-transform: translate(0, 10px);
     transform: translate(0, 10px);
   }
-  100%{
+  100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
@@ -1772,7 +1787,7 @@ $animation-timing: 16s;
 $carousel-items: 6;
 $animation-delay-fraction: math.div($animation-timing, $carousel-items);
 $animation-steps-fraction: math.div(100, $carousel-items);
-$slide-change-timing: 3;   // percentage of total animation cycle
+$slide-change-timing: 3; // percentage of total animation cycle
 
 
 .carousel {
@@ -1808,38 +1823,39 @@ $slide-change-timing: 3;   // percentage of total animation cycle
     opacity: 0;
     visibility: hidden;
   }
-  #{$slide-change-timing}%, #{$animation-steps-fraction}% {
-    transform: translateY(90%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
+  #{$slide-change-timing}%, #{$animation-steps-fraction}%  {
+  transform: translateY(90%) scale(0.7);
+  opacity: .4;
+  visibility: visible;
+}
   #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 
   #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
-    transform: translateY(-90%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
+  transform: translateY(-90%) scale(0.7);
+  opacity: .4;
+  visibility: visible;
+}
 
   #{($animation-steps-fraction * 3) + $slide-change-timing}% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: visible;
-  }
+  transform: translateY(-90%) scale(0.5);
+  opacity: 0;
+  visibility: visible;
+}
 
   100% {
-     transform: translateY(-90%) scale(0.5);
-     opacity: 0;
-     visibility: hidden;
-   }
+  transform: translateY(-90%) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+  }
+
 }
 
 /*=== FADE IN LEFT ===*/
-$page-5-text-lines:3;
+$page-5-text-lines: 3;
 
 @for $i from 1 through ($page-5-text-lines) {
   .page-5-text:nth-child(#{$i}) {
@@ -1872,6 +1888,7 @@ $page-5-text-lines:3;
     transform: none;
   }
 }
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
