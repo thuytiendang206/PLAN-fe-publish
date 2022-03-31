@@ -278,15 +278,15 @@ strong {
       font-family: $font-veneer;
       font-style: normal;
       font-weight: 400;
-      font-size: 88px;
-      line-height: 106px;
+      font-size: 80px;
+      line-height: 1;
       text-align: center;
       color: $secondary-white;
     }
 
     h1 {
       color: $primary-blue;
-      line-height: 120px;
+      line-height: 1.3;
     }
 
     h1 > span {
@@ -301,7 +301,7 @@ strong {
       height: fit-content;
       display: flex;
       align-self: flex-end;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
   }
 }
@@ -646,7 +646,7 @@ strong {
 
     .stories-1-text {
       p {
-        font-family: $font-roboto;
+        font-family: $font-arial;
         font-style: normal;
         font-weight: 200;
         font-size: 32px;
@@ -772,7 +772,7 @@ strong {
     }
 
     p {
-      font-family: $font-roboto;
+      font-family: $font-arial;
       font-style: normal;
       font-weight: 300;
       font-size: 32px;
@@ -1484,7 +1484,7 @@ strong {
               background: $secondary-white;
               box-shadow: 0 3px 2px rgb(0 0 0 / 15%);
               max-height: 180px;
-              overflow: scroll;
+              overflow: auto;
             }
           }
 
