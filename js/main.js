@@ -98,7 +98,8 @@ $(document).ready(function () {
                 $('.page-1').addClass("showing")
             }
             $('.section.active [data-aos]').addClass("aos-animate");
-        }
+        },
+        css3: true
     });
 
 })
