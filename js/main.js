@@ -90,12 +90,25 @@ $(document).ready(function () {
 
     $('#home-page').fullpage({
         scrollOverflow: true,
-        onLeave: function () {
+        onLeave: function (origin, destination, direction) {
+            if (destination && destination === 1) {
+                $('#header').removeClass("showing")
+            }
+            console.log(destination);
             $('.section [data-aos]').removeClass("aos-animate");
+            if (destination && (destination === 3 || destination === 5 || destination === 6)){
+                $("#logo-img").attr("src","images/logo-louder-plan-white.svg");
+            }
+            if (destination && (destination === 2 || destination === 4 || destination === 7)){
+                $("#logo-img").attr("src","images/logo-louder-plan-blue.svg");
+            }
         },
         afterLoad: function (origin, destination, direction) {
             if (destination && destination === 1) {
                 $('.page-1').addClass("showing")
+            }
+            if (destination && destination !== 1) {
+                $('#header').addClass("showing")
             }
             $('.section.active [data-aos]').addClass("aos-animate");
         },

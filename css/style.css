@@ -1366,6 +1366,10 @@ strong {
   animation-delay: 2s;
 }
 
+#home-body #header {
+  visibility: hidden;
+}
+
 /*=== FULL PAGE & FADE IN ===*/
 .fullpage-wrapper {
   width: 100% !important;
@@ -1488,7 +1492,7 @@ strong {
 }
 /*=== PULSE FOR CHEVRON-DOWN ===*/
 .pulse-animation {
-  animation: pulse 2s infinite;
+  animation: pulse 1.8s infinite;
 }
 
 @keyframes pulse {
@@ -1497,8 +1501,8 @@ strong {
     transform: translate(0, 0);
   }
   50% {
-    -webkit-transform: translate(0, 10px);
-    transform: translate(0, 10px);
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
   }
   100% {
     -webkit-transform: translate(0, 0);
