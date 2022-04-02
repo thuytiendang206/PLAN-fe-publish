@@ -94,13 +94,12 @@ $(document).ready(function () {
             if (destination && destination === 1) {
                 $('#header').removeClass("showing")
             }
-            console.log(destination);
             $('.section [data-aos]').removeClass("aos-animate");
-            if (destination && (destination === 3 || destination === 5 || destination === 6)){
-                $("#logo-img").attr("src","images/logo-louder-plan-white.svg");
+            if (destination && (destination === 3 || destination === 5 || destination === 6)) {
+                $("#logo-img").attr("src", "images/logo-louder-plan-white.svg");
             }
-            if (destination && (destination === 2 || destination === 4 || destination === 7)){
-                $("#logo-img").attr("src","images/logo-louder-plan-blue.svg");
+            if (destination && (destination === 2 || destination === 4 || destination === 7)) {
+                $("#logo-img").attr("src", "images/logo-louder-plan-blue.svg");
             }
         },
         afterLoad: function (origin, destination, direction) {
@@ -114,5 +113,4 @@ $(document).ready(function () {
         },
         css3: true
     });
-
 })

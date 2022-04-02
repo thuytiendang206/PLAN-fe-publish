@@ -405,22 +405,64 @@ strong {
   background-color: $primary-blue;
   padding: 8.5rem 0;
 
+  h3 {
+    font-family: $font-arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+    color: $secondary-white;
+  }
+
   h2 {
     font-family: $font-veneer;
     font-style: normal;
     font-weight: 400;
-    font-size: 88px;
-    line-height: 106px;
+    font-size: 48px;
+    line-height: 58px;
     color: $secondary-white;
   }
 
-  p {
-    font-family: $font-arial;
+  p.cta-time {
+    font-family: $font-veneer;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 40px;
+    line-height: 58px;
+    text-align: center;
+    color: #000000;
+
+    display: inline-block;
+    padding: 0 0.5rem ;
+
+    background: url("../images/bg-cta-time.svg") center no-repeat;
+    background-size: cover;
+  }
+  p.cta-time-des{
+    font-family: $font-arial;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
     color: $secondary-white;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  p.cta-des {
+    font-family: $font-arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+    color: $secondary-white;
+  }
+  .cta-time-wrapper{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -650,6 +692,7 @@ strong {
 .mr-header {
   margin-top: 80px;
 }
+
 /*--------------------------------------------------------------
 # TWO PHOTOS PAGE
 --------------------------------------------------------------*/
@@ -1687,7 +1730,7 @@ strong {
   }
 }
 
-#home-body #header{
+#home-body #header {
   visibility: hidden;
 }
 
@@ -1711,28 +1754,6 @@ strong {
     opacity: 0;
     z-index: 0;
     transition: all .7s ease-in-out;
-
-    .fp-slidesContainer {
-      width: 100% !important;
-      transform: none !important;
-
-      .fp-slide {
-        &.active {
-          visibility: visible;
-          opacity: 1;
-          z-index: 1;
-        }
-
-        width: 100% !important;
-        position: absolute;
-        left: 0;
-        top: 0;
-        visibility: hidden;
-        opacity: 0;
-        z-index: 0;
-        transition: all .7s ease-in-out;
-      }
-    }
   }
 }
 
@@ -1879,41 +1900,37 @@ $slide-change-timing: 3; // percentage of total animation cycle
   }
 }
 
-@keyframes carousel-animate-vertical {
-  0% {
-    transform: translateY(100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-  #{$slide-change-timing}%, #{$animation-steps-fraction}%  {
-    transform: translateY(90%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
-  #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
-    transform: translateY(-90%) scale(0.7);
-    opacity: .4;
-    visibility: visible;
-  }
-
-  #{($animation-steps-fraction * 3) + $slide-change-timing}% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: visible;
-  }
-
-  100% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-
-}
+//@keyframes carousel-animate-vertical {
+//  0% {
+//    transform: translateY(100%) scale(0.5);
+//    opacity: 0;
+//    visibility: hidden;
+//  }
+//  #{$slide-change-timing}%, #{$animation-steps-fraction}%  {
+//    transform: translateY(90%) scale(0.7);
+//    opacity: .4;
+//    visibility: visible;
+//  }
+//  #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
+//    transform: translateY(0) scale(1);
+//    opacity: 1;
+//    visibility: visible;
+//  }
+//  #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
+//    transform: translateY(-90%) scale(0.7);
+//    opacity: .4;
+//    visibility: visible;
+//  }
+//  #{($animation-steps-fraction * 3) + $slide-change-timing}% {
+//    transform: translateY(-90%) scale(0.5);
+//    opacity: 0;
+//    visibility: visible;
+//  }
+//  100% {
+//    transform: translateY(-90%) scale(0.5);
+//    opacity: 0;
+//    visibility: hidden;
+//  }
+//}
 
 

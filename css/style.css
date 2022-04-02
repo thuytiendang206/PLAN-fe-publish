@@ -337,21 +337,59 @@ strong {
   background-color: #0072CE;
   padding: 8.5rem 0;
 }
+.cta h3 {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  color: #FFFFFF;
+}
 .cta h2 {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
-  font-size: 88px;
-  line-height: 106px;
+  font-size: 48px;
+  line-height: 58px;
   color: #FFFFFF;
 }
-.cta p {
-  font-family: "Arial", sans-serif;
+.cta p.cta-time {
+  font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 40px;
+  line-height: 58px;
+  text-align: center;
+  color: #000000;
+  display: inline-block;
+  padding: 0 0.5rem;
+  background: url("../images/bg-cta-time.svg") center no-repeat;
+  background-size: cover;
+}
+.cta p.cta-time-des {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
   color: #FFFFFF;
+  width: 60%;
+  margin: 0 auto;
+}
+.cta p.cta-des {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.cta .cta-time-wrapper {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .next-story {
@@ -1390,25 +1428,6 @@ strong {
   opacity: 1;
   z-index: 1;
 }
-.fullpage-wrapper .fp-section .fp-slidesContainer {
-  width: 100% !important;
-  transform: none !important;
-}
-.fullpage-wrapper .fp-section .fp-slidesContainer .fp-slide {
-  width: 100% !important;
-  position: absolute;
-  left: 0;
-  top: 0;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 0;
-  transition: all 0.7s ease-in-out;
-}
-.fullpage-wrapper .fp-section .fp-slidesContainer .fp-slide.active {
-  visibility: visible;
-  opacity: 1;
-  z-index: 1;
-}
 
 /*=== ZOOM TOP TO BOTTOM ===*/
 .fp-viewing-0 .zoomTopToBottom {
@@ -1553,39 +1572,6 @@ strong {
 
 .carousel__item:nth-child(6) {
   animation-delay: calc(2.5s * 4);
-}
-
-@keyframes carousel-animate-vertical {
-  0% {
-    transform: translateY(100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-  3%, 16.6666666667% {
-    transform: translateY(90%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
-  }
-  19.6666666667%, 33.3333333333% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-  36.3333333333%, 50% {
-    transform: translateY(-90%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
-  }
-  53% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
