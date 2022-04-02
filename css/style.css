@@ -991,8 +991,11 @@ strong {
 #home-page p {
   margin: 0;
 }
-#home-page .page-1 {
-  background-color: #0072CE;
+#home-page .page-1 .page-1-wrapper {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #home-page .page-1 .text-wrapper {
   margin: 0 auto;
@@ -1342,6 +1345,23 @@ strong {
 /*--------------------------------------------------------------
 # ANIMATION
 --------------------------------------------------------------*/
+.showing {
+  visibility: visible !important;
+}
+
+#home-page .page-1 {
+  visibility: hidden;
+}
+#home-page .page-1 .louder-than-words h2.zoomInLeft {
+  animation-delay: 0s;
+}
+#home-page .page-1 .louder-than-words p {
+  animation-delay: 1s;
+}
+#home-page .page-1 .louder-than-words h1 {
+  animation-delay: 2s;
+}
+
 /*=== FULL PAGE & FADE IN ===*/
 .fullpage-wrapper {
   width: 100% !important;
@@ -1383,7 +1403,7 @@ strong {
 }
 
 /*=== ZOOM TOP TO BOTTOM ===*/
-.zoomTopToBottom {
+.fp-viewing-0 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1396,8 +1416,22 @@ strong {
     opacity: 0;
   }
 }
+/*=== FADE IN UP ===*/
+.fp-viewing-0 .page-1 .p1-fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
 /*=== ACT BACKGROUND ANIMATION ===*/
-.act {
+.fp-viewing-0 .act-bg {
   animation-name: backgroundCover;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1411,7 +1445,7 @@ strong {
   }
 }
 /*=== ZOOM RIGHT TO LEFT ===*/
-.zoomInLeft {
+.fp-viewing-0 .zoomInLeft {
   animation-name: zoomInLeft;
   animation-duration: 1.5s;
   animation-fill-mode: both;
@@ -1423,16 +1457,6 @@ strong {
     opacity: 0;
   }
 }
-.page-1 .louder-than-words h2.zoomInLeft {
-  animation-delay: 0s;
-}
-.page-1 .louder-than-words p {
-  animation-delay: 1s;
-}
-.page-1 .louder-than-words h1 {
-  animation-delay: 2s;
-}
-
 /*=== PULSE FOR CHEVRON-DOWN ===*/
 .pulse-animation {
   animation: pulse 2s infinite;
@@ -1453,7 +1477,7 @@ strong {
   }
 }
 /*=== VERTICAL CAROUSEL ANIMATION ===*/
-.carousel {
+.fp-viewing-2 .carousel {
   position: relative;
   width: 100%;
   display: flex;
@@ -1461,7 +1485,7 @@ strong {
   flex-direction: column;
 }
 
-.carousel__item {
+.fp-viewing-2 .carousel__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1471,31 +1495,31 @@ strong {
   opacity: 0;
   filter: drop-shadow(0 2px 2px #555);
   will-change: transform, opacity;
-  animation: carousel-animate-vertical 16s linear infinite;
+  animation: carousel-animate-vertical 15s linear infinite;
 }
 
 .carousel__item:nth-child(1) {
-  animation-delay: calc(2.6666666667s * 0);
+  animation-delay: calc(2.5s * -1);
 }
 
 .carousel__item:nth-child(2) {
-  animation-delay: calc(2.6666666667s * 1);
+  animation-delay: calc(2.5s * 0);
 }
 
 .carousel__item:nth-child(3) {
-  animation-delay: calc(2.6666666667s * 2);
+  animation-delay: calc(2.5s * 1);
 }
 
 .carousel__item:nth-child(4) {
-  animation-delay: calc(2.6666666667s * 3);
+  animation-delay: calc(2.5s * 2);
 }
 
 .carousel__item:nth-child(5) {
-  animation-delay: calc(2.6666666667s * 4);
+  animation-delay: calc(2.5s * 3);
 }
 
 .carousel__item:nth-child(6) {
-  animation-delay: calc(2.6666666667s * 5);
+  animation-delay: calc(2.5s * 4);
 }
 
 @keyframes carousel-animate-vertical {
@@ -1528,55 +1552,6 @@ strong {
     transform: translateY(-90%) scale(0.5);
     opacity: 0;
     visibility: hidden;
-  }
-}
-/*=== FADE IN LEFT ===*/
-.page-5-text:nth-child(1) {
-  animation-delay: calc(2.6666666667s * 2);
-}
-
-.page-5-text:nth-child(2) {
-  animation-delay: calc(2.6666666667s * 3);
-}
-
-.page-5-text:nth-child(3) {
-  animation-delay: calc(2.6666666667s * 4);
-}
-
-.fadeInLeft {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-@-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
 

@@ -22,7 +22,7 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+<body id="home-body">
     <!-- ======= Header ======= -->
 
     <!--    <header id="header" class="home-header container-fluid row justify-content-center">-->
@@ -48,21 +48,23 @@
     <!--    </header>&lt;!&ndash; End Header &ndash;&gt;-->
 
     <div id="home-page">
-        <div class="page-1 bg-blue section">
-            <div class="row justify-content-center">
-                <div class="text-wrapper text-start">
-                    <p class="zoomTopToBottom">Time to <span class="act">act!</span></p>
-                    <div class="louder-than-words">
-                        <div class="louder-than">
-                            <h2 class="zoomInLeft">Louder</h2>
-                            <p class="zoomInLeft">than</p>
+        <div class="page-1 bg-blue section fp-auto-height">
+            <div class="page-1-wrapper">
+                <div class="row justify-content-center">
+                    <div class="text-wrapper text-start">
+                        <p class="time-to-act zoomTopToBottom">Time to <span class="act-bg">act!</span></p>
+                        <div class="louder-than-words">
+                            <div class="louder-than">
+                                <h2 class="zoomInLeft">Louder</h2>
+                                <p class="zoomInLeft">than</p>
+                            </div>
+                            <h1 class="zoomInLeft">Words</h1>
                         </div>
-                        <h1 class="zoomInLeft">Words</h1>
                     </div>
                 </div>
-            </div>
-            <div class="chevron-down row justify-content-center">
-                <a href="#" class="btn-scroll scroll-down pulse-animation"><i class="bi bi-chevron-down"></i></a>
+                <div class="chevron-down row justify-content-center p1-fadeInUp">
+                    <a href="#" class="btn-scroll scroll-down pulse-animation"><i class="bi bi-chevron-down"></i></a>
+                </div>
             </div>
         </div>
         <div class="page-2 bg-yellow section">
@@ -119,13 +121,14 @@
                 <div class="col-11 col-md-10">
                     <div class="text text-center">
                         <div class="part-1">
-                            <p>the challenge of eliminating</p>
-                            <p>child marriage is particularly urgent in asia-pacific</p>
+                            <p data-aos="fade-up">the challenge of eliminating</p>
+                            <p data-aos="fade-up" data-aos-delay="1000">child marriage is particularly urgent in
+                                asia-pacific</p>
                         </div>
                         <div class="part-2">
-                            <p>where, despite progress,</p>
-                            <p>this harmful practice remains</p>
-                            <p>widespread and is on the rise.</p>
+                            <p data-aos="fade-up">where, despite progress,</p>
+                            <p data-aos="fade-up" data-aos-delay="1000">this harmful practice remains</p>
+                            <p data-aos="fade-up" data-aos-delay="2000">widespread and is on the rise.</p>
                         </div>
                     </div>
                 </div>
@@ -136,9 +139,11 @@
                 <div class="col-11">
                     <div class="row">
                         <div class="col-10 text-start">
-                            <p class="page-5-text fadeInLeft">Many girls and young women activists and their allies</p>
-                            <p class="page-5-text fadeInLeft">are engaging tirelessly to disrupt the vicious circle</p>
-                            <p class="page-5-text fadeInLeft last-line">perpetuating child marriage in this region.</p>
+                            <p data-aos="fade-right">Many girls and young women activists and their allies</p>
+                            <p data-aos="fade-right" data-aos-delay="1000">are engaging tirelessly to disrupt the
+                                vicious circle</p>
+                            <p data-aos="fade-right" data-aos-delay="2000" class="last-line">perpetuating child marriage
+                                in this region.</p>
                         </div>
                     </div>
                 </div>
@@ -148,16 +153,440 @@
         <div class="page-6 bg-blue section">
             <div class="row justify-content-center">
                 <div class="col-9 text-center">
-                    <p class="first-line" data-aos="fade-up" data-aos-anchor=".page-6">learn from their inspiring stories and</p>
-                    <p data-aos="fade-up" data-aos-anchor=".page-6">find out about the solutions...</p>
+                    <p data-aos="fade-up" class="first-line">learn from their inspiring stories and</p>
+                    <p data-aos="fade-up" data-aos-delay="500">find out about the solutions...</p>
                 </div>
             </div>
-            <div class="chevron-down row justify-content-center">
+            <div data-aos="fade-up" data-aos-delay="1000" class="chevron-down row justify-content-center">
                 <a href="#" class="btn-scroll scroll-down pulse-animation"><i class="bi bi-chevron-down"></i></a>
             </div>
         </div>
-        <div class="page-7 section">
-            <!--            Empty page-->
+        <div class="page-8 section fp-auto-height">
+            <div data-aos="fade-up" data-aos-delay="1000" id="home-stories" class="vh-100">
+                <!-- ======= Hero ======= -->
+                <section class="hero-section row">
+                    <div class="hero-text container-fluid row justify-content-center">
+                        <div class="col-6">
+                            <img src="images/title-louder-than-word.svg" alt="title-louder-than-word.svg">
+                        </div>
+                    </div>
+                </section><!-- ======= End Hero ======= -->
+            </div>
+
+            <!-- ======= Main Home-Stories  ======= -->
+            <div class="main-home-stories container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-11">
+
+                        <!-- =======  Filter  ======= -->
+                        <section class="filter-section section-space">
+                            <div class="filter-n-search row justify-content-md-between">
+                                <div class="filter-wrapper col-md-8">
+                                    <h2>FILTERS:</h2>
+                                    <form>
+                                        <ul class="faux-select country-select" data-selected-value="no-option">
+                                            <li class="selected-option"><span>COUNTRY</span>
+                                                <ul class="options-country options ">
+                                                    <li data-value="thailand"><p class="text">Thailand</p>
+                                                        <p class="number">1</p></li>
+                                                    <li data-value="vietnam"><p class="text">Vietnam</p>
+                                                        <p class="number">23</p></li>
+                                                    <li data-value="laos">Laos</li>
+                                                    <li data-value="india">India</li>
+                                                    <li data-value="lily">Lily</li>
+                                                    <li data-value="robin">Robin</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="faux-select theme-select" data-selected-value="no-option">
+                                            <li class="selected-option"><span>THEME</span>
+                                                <ul class="options-theme options">
+                                                    <li data-value="thailand">Thailand</li>
+                                                    <li data-value="vietnam">Vietnam</li>
+                                                    <li data-value="laos">Laos</li>
+                                                    <li data-value="india">India</li>
+                                                    <li data-value="lily">Lily</li>
+                                                    <li data-value="robin">Robin</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="form-btn btn-group">
+                                            <a href="#" class="btn-apply btn btn-primary active">Apply</a>
+                                            <a href="#" class="btn-reset btn btn-secondary">Reset</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="search-wrapper col-md-3">
+                                    <div class="search input-group">
+                                        <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="btnGroupSearch">
+                                        <div class="search-icon input-group-text" id="btnGroupSearch">
+                                            <i class="bi bi-search"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="under-line bg-blue"></div>
+                        </section><!-- ======= End Filter  ======= -->
+
+                        <!-- =======  List Portfolio  ======= -->
+                        <section class="portfolio section-space">
+                            <div class="row">
+                                <div class="odd-col col-md-3 col-6 story-card-item-wrapper">
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>On the airways an in communities<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">two young activists creating social change</p>
+                                                <div class="country"><p>Bangladesh</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/bangladesh-cards-background.jpg" alt="bangladesh-cards-background">
+                                                <img class="img-icon img-fluid" src="images/cards/bangladesh-cards.png" alt="bangladesh-cards">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>Never giver up<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    The Young Woman Who Won’t Quit Until Child Marriage is Eliminated in
+                                                    India</p>
+                                                <div class="country"><p>india</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/india-1-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/india-1-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>education matters<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    removing barriers to get girls educated in lao pdr.
+                                                </p>
+                                                <div class="country"><p>Laos</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/laos-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/laos-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>from child bride to budding<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    the young woman determined to be a success for her family.
+                                                </p>
+                                                <div class="country"><p>Philipins</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/philippines-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/philippines-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="even-col col-md-3 col-6 story-card-item-wrapper">
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>champion fathers bringing<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">Child Marriage to an End in Rural Bangladesh.</p>
+                                                <div class="country"><p>Bangladesh</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/bangladesh-2-cards-background.jpg" alt="bangladesh-2-cards-background">
+                                                <img class="img-icon img-fluid" src="images/cards/bangladesh-2-cards.png" alt="bangladesh-2-cards">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>the young voices<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    defying child marriage in india.
+                                                </p>
+                                                <div class="country"><p>india</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/india-2-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/india-2-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>a performance to remember<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    the female youth club member using her passion TO WARN AGAINST
+                                                    MARRIAGE.
+                                                </p>
+                                                <div class="country"><p>nepal</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/nepal-2-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/nepal-2-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>Myths and embarrasment dismantled<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    Teenagers getting appropriate answers about sexual and reproductive
+                                                    health and marriage in Timor-Leste
+                                                </p>
+                                                <div class="country"><p>timor-leste</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/timor-leste-cards-bg.png" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/timor-leste-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="odd-col col-md-3 col-6 story-card-item-wrapper">
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>BREAKING THE LINK<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">Child Marriage to an End in Rural Bangladesh.</p>
+                                                <div class="country"><p>CAMBODIA</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/cambodia-1-cards-bg.jpg" alt="cambodia-1-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/cambodia-1-cards.png" alt="cambodia-1-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>the messenger matters<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    indonesia’s religious leaders and girls preventing child marriage.
+                                                </p>
+                                                <div class="country"><p>indonesia</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/indonesia-1-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/indonesia-1-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>speaking out<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    young forces and voices defy child marriage in nepal.
+                                                </p>
+                                                <div class="country"><p>nepal</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/nepal-1-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/nepal-1-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>The Future Is Not Written:<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    The young husband and wife committee members breaking the cycle of
+                                                    child marriage.
+                                                </p>
+                                                <div class="country"><p>vietnam</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/vietnam-1-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/vietnam-1-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="even-col col-md-3 col-6 story-card-item-wrapper">
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>A Window of Opportunity<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">Child Marriage to an End in Rural Bangladesh.</p>
+                                                <div class="country"><p>CAMBODIA</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/cambodia-2-cards.png" alt="cambodia-2-cards.png">
+                                                <img class="img-icon img-fluid" src="images/cards/cambodia-2-cards.png" alt="cambodia-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>Let’s Talk<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    Helping teenagers get the right answers about sexual health and
+                                                    child marriage.
+                                                </p>
+                                                <div class="country"><p>indonesia</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/indonesia-2-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/indonesia-2-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>Taking Down Teenage Taboos<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    Talking about Sex to Prevent and Reduce Child Marriage.
+                                                </p>
+                                                <div class="country"><p>thailand</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/thailand-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/thailand-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="story-card-item">
+                                        <div class="story-card">
+                                            <div class="card-text">
+                                                <h3>
+                                                    <span>the light web<i class="original">...</i><i class="hover">:</i></span>
+                                                </h3>
+                                                <p class="thought">
+                                                    The online platform keeping girls away from the dark web and
+                                                    preventing child marriage.
+                                                </p>
+                                                <div class="country"><p>vietnam</p></div>
+                                            </div>
+                                            <div class="card-img-hover">
+                                                <img class="img-bg img-fluid" src="images/cards/vietnam-2-cards-bg.jpg" alt="india-2-cards-bg.jpg">
+                                                <img class="img-icon img-fluid" src="images/cards/vietnam-2-cards.png" alt="india-2-cards.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!-- ======= End Portfolio  ======= -->
+
+                        <!-- ======= More stories  ======= -->
+                        <section class="more-stories section-space">
+                            <h2>Lorem ipsum dolor</h2>
+                            <div class="more-stories-wrapper row">
+                                <div class="story-card-item col-md-3 col-6">
+                                    <div class="story-card bg-yellow">
+                                        <div class="card-text">
+                                            <h3>
+                                                <span>from words to action<i class="original">...</i><i class="hover">:</i></span>
+                                            </h3>
+                                            <p class="thought">Creating a collective voice to end child marriage through
+                                                advocacy and arts.</p>
+                                        </div>
+                                        <div class="card-img-hover">
+                                            <img class="img-bg img-fluid" src="images/regional-kenia-cards-bg.jpg" alt="regional-kenia-cards-bg.jpg">
+                                            <img class="img-icon img-fluid" src="images/regional-kenia-cards.png" alt="regional-kenia-cards.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-item col-md-3 col-6">
+                                    <div class="story-card bg-yellow">
+                                        <div class="card-text">
+                                            <h3>
+                                                <span>from words to action<i class="original">...</i><i class="hover">:</i></span>
+                                            </h3>
+                                            <p class="thought">Removing social stigmas to help end child marriage.</p>
+                                        </div>
+                                        <div class="card-img-hover">
+                                            <img class="img-bg img-fluid" src="images/regional-tien-cards-bg.jpg" alt="regional-tien-cards-bg.jpg">
+                                            <img class="img-icon img-fluid" src="images/regional-tien-cards.png" alt="regional-tien-cards.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-item col-md-3 col-6">
+                                    <div class="story-card bg-yellow">
+                                        <div class="card-text">
+                                            <h3>
+                                                <span>from words to action<i class="original">...</i><i class="hover">:</i></span>
+                                            </h3>
+                                            <p class="thought">A fearless leader driving change to reduce child
+                                                marriage.</p>
+                                        </div>
+                                        <div class="card-img-hover">
+                                            <img class="img-bg img-fluid" src="images/regional-ria-cards-bg.jpg" alt="regional-ria-cards-bg.jpg">
+                                            <img class="img-icon img-fluid" src="images/regional-ria-cards.png" alt="regional-ria-cards.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="story-card-item col-md-3 col-6">
+                                    <div class="story-card">
+                                        <div class="card-text bg-yellow">
+                                            <h3>
+                                                <span>from words to action<i class="original">...</i><i class="hover">:</i></span>
+                                            </h3>
+                                            <p class="thought">Inspiring other men to advocate against child
+                                                marriage.</p>
+                                        </div>
+                                        <div class="card-img-hover">
+                                            <img class="img-bg img-fluid" src="images/regional-rizqui-cards-bg.jpg" alt="regional-rizqui-cards-bg.jpg">
+                                            <img class="img-icon img-fluid" src="images/regional-rizqui-cards.png" alt="regional-rizqui-cards.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!-- ======= End More stories  ======= -->
+
+                        <!-- ======= Video stories  ======= -->
+                        <section id="video-stories" class="section-space">
+                            <h2>Lorem ipsum dolor</h2>
+                            <div class="video-container">
+                                <iframe width="424" height="238" src="https://www.youtube.com/embed/ZUkL45VLLTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </section><!-- ======= End Video stories  ======= -->
+                    </div>
+                </div>
+            </div>
+            <!-- ======= End Main Home-Stories  ======= -->
         </div>
     </div>
 

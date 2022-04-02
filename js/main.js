@@ -55,6 +55,13 @@
 
 $(document).ready(function () {
     'use strict';
+    AOS.init({
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: 'ease-in-out',
+        mirror: true,
+    });
+
     $('.faux-select').click(function () {
         $(this).toggleClass('open');
         $('.options', this).toggleClass('open');
@@ -75,19 +82,23 @@ $(document).ready(function () {
     });
 
     // Set height of a div based on a percentage of width
-    $(function() {
+    $(function () {
         var div = $('.story-card-item');
         var width = div.width();
-        div.css('height', width*1.21068);  //magic number from percentage width/ height of image background
+        div.css('height', width * 816 / 674);  //magic number from percentage width/ height of image background
     });
 
-    $('#home-page').fullpage();
+    $('#home-page').fullpage({
+        scrollOverflow: true,
+        onLeave: function () {
+            $('.section [data-aos]').removeClass("aos-animate");
+        },
+        afterLoad: function (origin, destination, direction) {
+            if (destination && destination === 1) {
+                $('.page-1').addClass("showing")
+            }
+            $('.section.active [data-aos]').addClass("aos-animate");
+        }
+    });
 
-    AOS.init({
-        offset: 10, // offset (in px) from the original trigger point
-        delay: 1000, // values from 0 to 3000, with step 50ms
-        duration: 2000, // values from 0 to 3000, with step 50ms
-        easing: 'ease-in-out',
-
-    })
 })

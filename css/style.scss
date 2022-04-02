@@ -1218,7 +1218,12 @@ strong {
   }
 
   .page-1 {
-    background-color: $primary-blue;
+    .page-1-wrapper {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .text-wrapper {
       margin: 0 auto;
@@ -1657,6 +1662,28 @@ strong {
 /*--------------------------------------------------------------
 # ANIMATION
 --------------------------------------------------------------*/
+.showing {
+  visibility: visible !important;
+}
+
+#home-page .page-1 {
+  visibility: hidden;
+
+  .louder-than-words {
+    h2.zoomInLeft {
+      animation-delay: 0s;
+    }
+
+    p {
+      animation-delay: 1s;
+    }
+
+    h1 {
+      animation-delay: 2s;
+    }
+  }
+}
+
 /*=== FULL PAGE & FADE IN ===*/
 .fullpage-wrapper {
   width: 100% !important;
@@ -1703,7 +1730,7 @@ strong {
 }
 
 /*=== ZOOM TOP TO BOTTOM ===*/
-.zoomTopToBottom {
+.fp-viewing-0 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1717,8 +1744,24 @@ strong {
   }
 }
 
+/*=== FADE IN UP ===*/
+.fp-viewing-0 .page-1 .p1-fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
 /*=== ACT BACKGROUND ANIMATION ===*/
-.act {
+// Hero banner take 4s
+.fp-viewing-0 .act-bg {
   animation-name: backgroundCover;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1733,7 +1776,7 @@ strong {
 }
 
 /*=== ZOOM RIGHT TO LEFT ===*/
-.zoomInLeft {
+.fp-viewing-0 .zoomInLeft {
   animation-name: zoomInLeft;
   animation-duration: 1.5s;
   animation-fill-mode: both;
@@ -1743,22 +1786,6 @@ strong {
   from {
     transform: scale(5) translateX(20%);
     opacity: 0;
-  }
-}
-
-.page-1 {
-  .louder-than-words {
-    h2.zoomInLeft {
-      animation-delay: 0s;
-    }
-
-    p {
-      animation-delay: 1s;
-    }
-
-    h1 {
-      animation-delay: 2s;
-    }
   }
 }
 
@@ -1783,14 +1810,14 @@ strong {
 }
 
 /*=== VERTICAL CAROUSEL ANIMATION ===*/
-$animation-timing: 16s;
+$animation-timing: 15s;
 $carousel-items: 6;
 $animation-delay-fraction: math.div($animation-timing, $carousel-items);
 $animation-steps-fraction: math.div(100, $carousel-items);
 $slide-change-timing: 3; // percentage of total animation cycle
 
 
-.carousel {
+.fp-viewing-2 .carousel {
   position: relative;
   width: 100%;
   display: flex;
@@ -1798,7 +1825,7 @@ $slide-change-timing: 3; // percentage of total animation cycle
   flex-direction: column;
 }
 
-.carousel__item {
+.fp-viewing-2 .carousel__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1813,7 +1840,7 @@ $slide-change-timing: 3; // percentage of total animation cycle
 
 @for $i from 1 through ($carousel-items) {
   .carousel__item:nth-child(#{$i}) {
-    animation-delay: calc(#{$animation-delay-fraction} * #{$i - 1});
+    animation-delay: calc(#{$animation-delay-fraction} * #{$i - 2});
   }
 }
 
@@ -1824,82 +1851,33 @@ $slide-change-timing: 3; // percentage of total animation cycle
     visibility: hidden;
   }
   #{$slide-change-timing}%, #{$animation-steps-fraction}%  {
-  transform: translateY(90%) scale(0.7);
-  opacity: .4;
-  visibility: visible;
-}
+    transform: translateY(90%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
   #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
 
   #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
-  transform: translateY(-90%) scale(0.7);
-  opacity: .4;
-  visibility: visible;
-}
+    transform: translateY(-90%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
 
   #{($animation-steps-fraction * 3) + $slide-change-timing}% {
-  transform: translateY(-90%) scale(0.5);
-  opacity: 0;
-  visibility: visible;
-}
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
 
   100% {
-  transform: translateY(-90%) scale(0.5);
-  opacity: 0;
-  visibility: hidden;
-  }
-
-}
-
-/*=== FADE IN LEFT ===*/
-$page-5-text-lines: 3;
-
-@for $i from 1 through ($page-5-text-lines) {
-  .page-5-text:nth-child(#{$i}) {
-    animation-delay: calc(#{$animation-delay-fraction} * #{$i + 1});
-  }
-}
-
-.fadeInLeft {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-@-webkit-keyframes fadeInLeft {
-  from {
+    transform: translateY(-90%) scale(0.5);
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
+    visibility: hidden;
   }
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
 
