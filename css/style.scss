@@ -434,12 +434,13 @@ strong {
     color: #000000;
 
     display: inline-block;
-    padding: 0 0.5rem ;
+    padding: 0 0.5rem;
 
     background: url("../images/bg-cta-time.svg") center no-repeat;
     background-size: cover;
   }
-  p.cta-time-des{
+
+  p.cta-time-des {
     font-family: $font-arial;
     font-style: normal;
     font-weight: lighter;
@@ -460,7 +461,8 @@ strong {
     text-align: center;
     color: $secondary-white;
   }
-  .cta-time-wrapper{
+
+  .cta-time-wrapper {
     margin-top: 6rem;
     margin-bottom: 6rem;
   }
@@ -1380,11 +1382,52 @@ strong {
 
   .page-4 {
     video {
-      display: none;
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .page-4-text-wrapper {
+      height: inherit;
+      align-items: center;
+    }
+
+    .text {
+      position: relative;
+    }
+
+    .part-1 {
+      transition: all ease-in-out 0.5s;
     }
 
     .part-2 {
-      display: none;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all ease-in-out 0.5s;
+
+      .bg-text {
+        display: inline-block;
+        padding: 0 0.5rem;
+      }
+
+      .bg-text:after {
+        content: " ";
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        z-index: -1;
+      }
     }
 
     p {
@@ -1712,6 +1755,14 @@ strong {
   visibility: visible !important;
 }
 
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
 #home-page .page-1 {
   visibility: hidden;
 
@@ -1754,6 +1805,21 @@ strong {
     opacity: 0;
     z-index: 0;
     transition: all .7s ease-in-out;
+  }
+}
+
+/*=== BACKGROUND FROM LEFT TO RIGHT ===*/
+.fp-viewing-3 .bg-text:after {
+  animation-name: triggerBackground;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 6.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+@keyframes triggerBackground {
+  to {
+    width: 100%;
   }
 }
 

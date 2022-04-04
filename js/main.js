@@ -88,13 +88,14 @@ $(document).ready(function () {
         div.css('height', width * 816 / 674);  //magic number from percentage width/ height of image background
     });
 
+    var videoMap = $("#map-video");
     $('#home-page').fullpage({
         scrollOverflow: true,
         onLeave: function (origin, destination, direction) {
+            $('.section [data-aos]').removeClass("aos-animate");
             if (destination && destination === 1) {
                 $('#header').removeClass("showing")
             }
-            $('.section [data-aos]').removeClass("aos-animate");
             if (destination && (destination === 3 || destination === 5 || destination === 6)) {
                 $("#logo-img").attr("src", "images/logo-louder-plan-white.svg");
             }
@@ -103,13 +104,28 @@ $(document).ready(function () {
             }
         },
         afterLoad: function (origin, destination, direction) {
+            $('.section.active [data-aos]').addClass("aos-animate");
             if (destination && destination === 1) {
-                $('.page-1').addClass("showing")
+                $('.page-1').addClass("showing");
             }
             if (destination && destination !== 1) {
-                $('#header').addClass("showing")
+                $('#header').addClass("showing");
             }
-            $('.section.active [data-aos]').addClass("aos-animate");
+            if (destination && destination === 4) {
+                videoMap.one("play", function () {
+                    this.currentTime = 0;
+                });
+                videoMap.get(0).play();
+                $('.page-4-text-wrapper .part-2 [data-aos]').removeClass("aos-animate");
+                setTimeout(function () {
+                    $('.page-4-text-wrapper .part-1').addClass("opacity-0");
+                    $('.page-4-text-wrapper .part-2').addClass("opacity-1");
+                    $('.page-4-text-wrapper .part-2 [data-aos]').addClass("aos-animate");
+                }, 3500);
+            } else {
+                $('.page-4-text-wrapper .part-1').removeClass("opacity-0");
+                $('.page-4-text-wrapper .part-2').removeClass("opacity-1");
+            }
         },
         css3: true
     });

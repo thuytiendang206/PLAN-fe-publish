@@ -1127,10 +1127,46 @@ strong {
   color: #FFFFFF;
 }
 #home-page .page-4 video {
-  display: none;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#home-page .page-4 .page-4-text-wrapper {
+  height: inherit;
+  align-items: center;
+}
+#home-page .page-4 .text {
+  position: relative;
+}
+#home-page .page-4 .part-1 {
+  transition: all ease-in-out 0.5s;
 }
 #home-page .page-4 .part-2 {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all ease-in-out 0.5s;
+}
+#home-page .page-4 .part-2 .bg-text {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+#home-page .page-4 .part-2 .bg-text:after {
+  content: " ";
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  z-index: -1;
 }
 #home-page .page-4 p {
   font-family: "Veneer";
@@ -1391,6 +1427,14 @@ strong {
   visibility: visible !important;
 }
 
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
 #home-page .page-1 {
   visibility: hidden;
 }
@@ -1429,6 +1473,20 @@ strong {
   z-index: 1;
 }
 
+/*=== BACKGROUND FROM LEFT TO RIGHT ===*/
+.fp-viewing-3 .bg-text:after {
+  animation-name: triggerBackground;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 6.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+@keyframes triggerBackground {
+  to {
+    width: 100%;
+  }
+}
 /*=== ZOOM TOP TO BOTTOM ===*/
 .fp-viewing-0 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
