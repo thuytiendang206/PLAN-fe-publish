@@ -124,7 +124,6 @@ $(document).ready(function () {
         setTimeout(function () {
             img.src = `images/people/${i.toString()}.png`;
             requestAnimationFrame(() => {
-                context.clearRect(0, 0, canvas.width, canvas.height);
                 context.drawImage(img, 0, 0);
             })
         }, timeDelay * i);
