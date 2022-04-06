@@ -55,6 +55,7 @@
 
 $(document).ready(function () {
     'use strict';
+    // Init aos animation
     AOS.init({
         delay: 0, // values from 0 to 3000, with step 50ms
         duration: 1000, // values from 0 to 3000, with step 50ms
@@ -62,6 +63,7 @@ $(document).ready(function () {
         mirror: true,
     });
 
+    // Single select
     $('.faux-select').click(function () {
         $(this).toggleClass('open');
         $('.options', this).toggleClass('open');
@@ -88,43 +90,91 @@ $(document).ready(function () {
         div.css('height', width * 816 / 674);  //magic number from percentage width/ height of image background
     });
 
+
+    // HOME PAGE, PEOPLE ANIMATION
+    const canvas = document.getElementById("people-animation");
+    const context = canvas.getContext("2d");
+    const fullDuration = 6;
+    const frameCount = 73;
+    const timeDelay = fullDuration / frameCount * 1000;
+    const img = new Image()
+    img.src = 'images/people/0.png';
+    canvas.width = 1920;
+    canvas.height = 1365;
+    img.onload = function () {
+        context.drawImage(img, 0, 0);
+    }
+
+    // preload to make the animation smoother
+    const preloadImages = () => {
+        for (let i = 0; i < frameCount; i++) {
+            const img = new Image();
+            img.src = `images/people/${i.toString()}.png`;
+        }
+    };
+    preloadImages();
+
+    function animationPeople() {
+        for (let i = 0; i < frameCount; i++) {
+            drawImg(i);
+        }
+    }
+
+    function drawImg(i) {
+        setTimeout(function () {
+            img.src = `images/people/${i.toString()}.png`;
+            requestAnimationFrame(() => {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(img, 0, 0);
+            })
+        }, timeDelay * i);
+    }
+
+    // HOME PAGE, FULL PAGE JS
     var videoMap = $("#map-video");
     $('#home-page').fullpage({
         scrollOverflow: true,
         onLeave: function (origin, destination, direction) {
             $('.section [data-aos]').removeClass("aos-animate");
-            if (destination && destination === 1) {
-                $('#header').removeClass("showing")
-            }
-            if (destination && (destination === 3 || destination === 5 || destination === 6)) {
-                $("#logo-img").attr("src", "images/logo-louder-plan-white.svg");
-            }
-            if (destination && (destination === 2 || destination === 4 || destination === 7)) {
-                $("#logo-img").attr("src", "images/logo-louder-plan-blue.svg");
+            if (destination) {
+                if (destination === 1) {
+                    $('#header').removeClass("showing")
+                } else if (destination === 3 || destination === 5 || destination === 6) {
+                    $("#logo-img").attr("src", "images/logo-louder-plan-white.svg");
+                } else if (destination === 2 || destination === 4 || destination === 7) {
+                    $("#logo-img").attr("src", "images/logo-louder-plan-blue.svg");
+                }
             }
         },
         afterLoad: function (origin, destination, direction) {
             $('.section.active [data-aos]').addClass("aos-animate");
-            if (destination && destination === 1) {
-                $('.page-1').addClass("showing");
-            }
-            if (destination && destination !== 1) {
-                $('#header').addClass("showing");
-            }
-            if (destination && destination === 4) {
-                videoMap.one("play", function () {
-                    this.currentTime = 0;
-                });
-                videoMap.get(0).play();
-                $('.page-4-text-wrapper .part-2 [data-aos]').removeClass("aos-animate");
-                setTimeout(function () {
-                    $('.page-4-text-wrapper .part-1').addClass("opacity-0");
-                    $('.page-4-text-wrapper .part-2').addClass("opacity-1");
-                    $('.page-4-text-wrapper .part-2 [data-aos]').addClass("aos-animate");
-                }, 3500);
-            } else {
-                $('.page-4-text-wrapper .part-1').removeClass("opacity-0");
-                $('.page-4-text-wrapper .part-2').removeClass("opacity-1");
+            if (destination) {
+                if (destination === 1) {
+                    $('.page-1').addClass("showing");
+                } else {
+                    $('#header').addClass("showing");
+                    if (destination === 2) {
+                        animationPeople();
+                    } else {
+                        drawImg(0);
+                    }
+
+                    if (destination === 4) {
+                        videoMap.one("play", function () {
+                            this.currentTime = 0;
+                        });
+                        videoMap.get(0).play();
+                        $('.page-4-text-wrapper .part-2 [data-aos]').removeClass("aos-animate");
+                        setTimeout(function () {
+                            $('.page-4-text-wrapper .part-1').addClass("opacity-0");
+                            $('.page-4-text-wrapper .part-2').addClass("opacity-1");
+                            $('.page-4-text-wrapper .part-2 [data-aos]').addClass("aos-animate");
+                        }, 3500);
+                    } else {
+                        $('.page-4-text-wrapper .part-1').removeClass("opacity-0");
+                        $('.page-4-text-wrapper .part-2').removeClass("opacity-1");
+                    }
+                }
             }
         },
         css3: true
