@@ -127,8 +127,8 @@ $(document).ready(function () {
         onLeave: function (origin, destination, direction) {
             $('.section [data-aos]').removeClass("aos-animate");
             if (destination) {
-                if (destination === 1) {
-                    $('#header').removeClass("showing")
+                if (destination === 1 || destination === 7) {
+                    $('#header').removeClass("showing");
                 } else if (destination === 3 || destination === 5 || destination === 6) {
                     $("#logo-img").attr("src", "images/logo-louder-plan-white.svg");
                 } else if (destination === 2 || destination === 4 || destination === 7) {
@@ -163,6 +163,10 @@ $(document).ready(function () {
                     } else {
                         $('.page-4-text-wrapper .part-1').removeClass("opacity-0");
                         $('.page-4-text-wrapper .part-2').removeClass("opacity-1");
+                    }
+
+                    if (destination === 7) {
+                        $('#header').removeClass("showing");
                     }
                 }
             }

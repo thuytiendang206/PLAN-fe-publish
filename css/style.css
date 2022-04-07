@@ -186,19 +186,22 @@ strong {
 }
 
 #header {
-  padding: 1rem 0 0 0;
   position: absolute;
+}
+
+#header, #header-stories {
+  padding: 1rem 0 0 0;
   z-index: 2;
 }
-#header div.logo > a img {
+#header div.logo > a img, #header-stories div.logo > a img {
   max-height: 53px;
   display: inline-block;
   width: fit-content;
 }
-#header .navbar {
+#header .navbar, #header-stories .navbar {
   padding: 0;
 }
-#header .navbar #menu-label {
+#header .navbar .menu-label, #header-stories .navbar .menu-label {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
@@ -207,7 +210,7 @@ strong {
   text-align: center;
   color: #FFFFFF;
 }
-#header .navbar img {
+#header .navbar img, #header-stories .navbar img {
   max-height: 53px;
   width: fit-content;
 }
@@ -1026,7 +1029,7 @@ strong {
 /*--------------------------------------------------------------
 # HOME PAGE
 --------------------------------------------------------------*/
-#header.home-header .navbar #menu-label {
+#header.home-header .navbar .menu-label, #header-stories .navbar .menu-label {
   color: #0072CE;
 }
 
@@ -1103,11 +1106,15 @@ strong {
   line-height: 140%;
   color: #243C4B;
   margin: 0;
+  z-index: 2;
 }
 #home-page .page-2 p.first-line {
   font-weight: 400;
   font-size: 94px;
   line-height: 113px;
+}
+#home-page .page-2 .canvas-wrapper {
+  z-index: -1;
 }
 #home-page .page-2 canvas {
   max-width: 100vw;
@@ -1115,6 +1122,7 @@ strong {
   position: fixed;
   right: 0;
   top: 0;
+  z-index: -1;
 }
 #home-page .page-3 .page-3-wrapper {
   height: 100%;
@@ -1195,6 +1203,12 @@ strong {
 }
 #home-page .page-5 .last-line {
   margin-right: 11rem;
+}
+#home-page .page-5 .pg-5-speaker {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 #home-page .page-6 p {
   font-family: "Veneer";
@@ -1637,6 +1651,39 @@ strong {
 
 .carousel__item:nth-child(6) {
   animation-delay: calc(2.5s * 4);
+}
+
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  3%, 16.6666666667% {
+    transform: translateY(90%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  19.6666666667%, 33.3333333333% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  36.3333333333%, 50% {
+    transform: translateY(-90%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  53% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
