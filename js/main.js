@@ -94,25 +94,16 @@ $(document).ready(function () {
     // HOME PAGE, PEOPLE ANIMATION
     const canvas = document.getElementById("people-animation");
     const context = canvas.getContext("2d");
-    const fullDuration = 6;
-    const frameCount = 73;
+    const fullDuration = 7;
+    const frameCount = 80;
     const timeDelay = fullDuration / frameCount * 1000;
     const img = new Image()
-    img.src = 'images/people/0.png';
-    canvas.width = 1920;
-    canvas.height = 1365;
+    img.src = 'images/people/00.png';
+    canvas.width = 1280;
+    canvas.height = 974;
     img.onload = function () {
         context.drawImage(img, 0, 0);
     }
-
-    // preload to make the animation smoother
-    const preloadImages = () => {
-        for (let i = 0; i < frameCount; i++) {
-            const img = new Image();
-            img.src = `images/people/${i.toString()}.png`;
-        }
-    };
-    preloadImages();
 
     function animationPeople() {
         for (let i = 0; i < frameCount; i++) {
@@ -122,7 +113,7 @@ $(document).ready(function () {
 
     function drawImg(i) {
         setTimeout(function () {
-            img.src = `images/people/${i.toString()}.png`;
+            img.src = `images/people/0${i.toString()}.png`;
             requestAnimationFrame(() => {
                 context.drawImage(img, 0, 0);
             })
