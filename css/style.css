@@ -185,10 +185,6 @@ strong {
   color: #243C4B;
 }
 
-#header {
-  position: absolute;
-}
-
 #header, #header-stories {
   padding: 1rem 0 0 0;
   z-index: 2;
@@ -213,6 +209,10 @@ strong {
 #header .navbar img, #header-stories .navbar img {
   max-height: 53px;
   width: fit-content;
+}
+
+#header {
+  position: absolute;
 }
 
 #first-page-photo {
@@ -1223,6 +1223,9 @@ strong {
   font-weight: 400;
   font-size: 124px;
   line-height: 149px;
+}
+#home-page .page-7 #home-stories .hero-section {
+  height: calc(100% - 69px);
 }
 
 #home-stories .hero-section {

@@ -226,10 +226,6 @@ strong {
   }
 }
 
-#header {
-  position: absolute;
-}
-
 #header, #header-stories{
   padding: 1rem 0 0 0;
   z-index: 2;
@@ -260,6 +256,10 @@ strong {
       width: fit-content;
     }
   }
+}
+
+#header {
+  position: absolute;
 }
 
 #first-page-photo {
@@ -1496,6 +1496,12 @@ strong {
       font-weight: 400;
       font-size: 124px;
       line-height: 149px;
+    }
+  }
+
+  .page-7 {
+    #home-stories .hero-section{
+      height: calc(100% - 69px);
     }
   }
 }
