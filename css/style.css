@@ -62,6 +62,10 @@ p {
   color: #0072CE !important;
 }
 
+.cl-white {
+  color: #FFFFFF !important;
+}
+
 .bg-orange {
   background-color: #E17800 !important;
 }
@@ -197,7 +201,7 @@ strong {
 #header .navbar, #header-stories .navbar {
   padding: 0;
 }
-#header .navbar .menu-label, #header-stories .navbar .menu-label {
+#header .navbar #menu-label, #header-stories .navbar #menu-label {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
@@ -205,10 +209,39 @@ strong {
   line-height: 34px;
   text-align: center;
   color: #FFFFFF;
+  margin-bottom: 0;
 }
 #header .navbar img, #header-stories .navbar img {
   max-height: 53px;
   width: fit-content;
+}
+#header .navbar ul, #header-stories .navbar ul {
+  background: none;
+  border: none;
+  padding: 0;
+  right: 2rem;
+  display: block;
+  top: 100%;
+  margin-top: 0.125rem;
+  left: auto;
+}
+#header .navbar ul li, #header-stories .navbar ul li {
+  text-align: right;
+}
+#header .navbar ul a.dropdown-item:hover, #header .navbar ul a.dropdown-item:focus, #header-stories .navbar ul a.dropdown-item:hover, #header-stories .navbar ul a.dropdown-item:focus {
+  background: none;
+}
+#header .navbar .circle-animation, #header-stories .navbar .circle-animation {
+  transition: transform 0.9s ease-out;
+}
+#header .navbar .circle-wrapper, #header-stories .navbar .circle-wrapper {
+  margin-bottom: 12px;
+}
+#header .navbar #circle-1, #header-stories .navbar #circle-1 {
+  position: absolute;
+}
+#header .navbar #circle-2, #header-stories .navbar #circle-2 {
+  transform: translate(15px, 12px);
 }
 
 #header {
@@ -1657,39 +1690,6 @@ strong {
 
 .carousel__item:nth-child(6) {
   animation-delay: calc(2.5s * 4);
-}
-
-@keyframes carousel-animate-vertical {
-  0% {
-    transform: translateY(100%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
-  3%, 16.6666666667% {
-    transform: translateY(90%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
-  }
-  19.6666666667%, 33.3333333333% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-  36.3333333333%, 50% {
-    transform: translateY(-90%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
-  }
-  53% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    transform: translateY(-90%) scale(0.5);
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -83,6 +83,38 @@ $(document).ready(function () {
         $('.theme-select').attr('data-selected-value', dataValue);
     });
 
+    // MENU
+    var menuLabel = $('#menu-label');
+    var liMenu = $('#navbar>ul>li');
+    var ulMenu = $('#navbar>ul');
+    var circle = $('#circle-1');
+
+    function openMenu() {
+        menuLabel.addClass('open-menu');
+        const itemLength = liMenu.length;
+        circle.css('transform', 'translateY(calc(' + 100 * itemLength + '%  + 10px))');
+        ulMenu.removeClass('d-none');
+    }
+
+    function closeMenu() {
+        circle.css('transform', 'translateY(' + 0 + '%)');
+        menuLabel.removeClass('open-menu');
+        ulMenu.addClass('d-none');
+    }
+
+    menuLabel.click(function () {
+        if ($(this).hasClass('open-menu')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    liMenu.hover(function () {
+        circle.css('transform', 'translateY(calc(' + 100*($(this).index() + 1) + '%  + 10px))');
+    });
+
+
     // Set height of a div based on a percentage of width
     $(function () {
         var div = $('.story-card-item');
