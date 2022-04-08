@@ -1611,7 +1611,7 @@ strong {
   }
 }
 /*=== VERTICAL CAROUSEL ANIMATION ===*/
-.fp-viewing-2 .carousel {
+.carousel {
   position: relative;
   width: 100%;
   display: flex;
@@ -1619,7 +1619,7 @@ strong {
   flex-direction: column;
 }
 
-.fp-viewing-2 .carousel__item {
+.carousel__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1629,6 +1629,9 @@ strong {
   opacity: 0;
   filter: drop-shadow(0 2px 2px #555);
   will-change: transform, opacity;
+}
+
+.fp-viewing-2 .carousel__item {
   animation: carousel-animate-vertical 15s linear infinite;
 }
 

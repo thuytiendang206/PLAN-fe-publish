@@ -1970,7 +1970,7 @@ $animation-steps-fraction: math.div(100, $carousel-items);
 $slide-change-timing: 3; // percentage of total animation cycle
 
 
-.fp-viewing-2 .carousel {
+.carousel {
   position: relative;
   width: 100%;
   display: flex;
@@ -1978,7 +1978,7 @@ $slide-change-timing: 3; // percentage of total animation cycle
   flex-direction: column;
 }
 
-.fp-viewing-2 .carousel__item {
+.carousel__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1988,6 +1988,9 @@ $slide-change-timing: 3; // percentage of total animation cycle
   opacity: 0;
   filter: drop-shadow(0 2px 2px #555);
   will-change: transform, opacity;
+}
+
+.fp-viewing-2 .carousel__item {
   animation: carousel-animate-vertical $animation-timing linear infinite;
 }
 
