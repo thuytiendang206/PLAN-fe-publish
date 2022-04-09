@@ -282,7 +282,7 @@ strong {
 
       li.active {
         a.dropdown-item {
-          color: $secondary-black-blue;
+          color: $secondary-black-blue !important;
           &::after {
             width: 100%;
           }

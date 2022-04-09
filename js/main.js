@@ -96,7 +96,7 @@ $(document).ready(function () {
         circle.css('transform', 'translateY(calc(' + 100 * itemLength + '%  + 15px))');
         circle2.css('transform', 'rotate(180deg) translate(0, -10px)');
         ulMenu.removeClass('d-none');
-        $(liMenu.get(itemLength-1)).addClass("active");
+        $(liMenu.get(itemLength - 1)).addClass("active");
     }
 
     function closeMenu() {
@@ -117,7 +117,7 @@ $(document).ready(function () {
 
     liMenu.hover(function () {
         liMenu.removeClass("active");
-        circle.css('transform', 'translateY(calc(' + 100*($(this).index() + 1) + '%  + 15px))');
+        circle.css('transform', 'translateY(calc(' + 100 * ($(this).index() + 1) + '%  + 15px))');
         $(this).addClass("active")
     });
 
@@ -159,29 +159,48 @@ $(document).ready(function () {
         }, timeDelay * i);
     }
 
+
+    // Copy header for stories
+
+    function copyHeader() {
+        var $el = $('#header > div').clone();
+        $('#header-stories').append($el);
+    }
+
     // HOME PAGE, FULL PAGE JS
     var videoMap = $("#map-video");
+    var header = $('#header');
     $('#home-page').fullpage({
         scrollOverflow: true,
         onLeave: function (origin, destination, direction) {
             $('.section [data-aos]').removeClass("aos-animate");
             if (destination) {
                 if (destination === 1 || destination === 7) {
-                    $('#header').removeClass("showing");
+                    header.removeClass("showing");
                 } else if (destination === 3 || destination === 5 || destination === 6) {
                     $("#logo-img").attr("src", "images/logo-louder-plan-white.svg");
+                    circle.attr("src", "images/circle-white-1.svg");
+                    circle2.attr("src", "images/circle-white-2.svg");
+                    menuLabel.css("color", "#FFFFFF");
+                    $('#navbar>ul>li>a').css("color", "#FFFFFF");
+
                 } else if (destination === 2 || destination === 4 || destination === 7) {
                     $("#logo-img").attr("src", "images/logo-louder-plan-blue.svg");
+                    circle.attr("src", "images/circle-blue-1.svg");
+                    circle2.attr("src", "images/circle-blue-2.svg");
+                    menuLabel.css("color", "#0072CE");
+                    $('#navbar>ul>li>a').css("color", "#0072CE");
                 }
             }
         },
         afterLoad: function (origin, destination, direction) {
             $('.section.active [data-aos]').addClass("aos-animate");
             if (destination) {
+                header.remove("d-none");
                 if (destination === 1) {
                     $('.page-1').addClass("showing");
                 } else {
-                    $('#header').addClass("showing");
+                    header.addClass("showing");
                     if (destination === 2) {
                         animationPeople();
                     } else {
@@ -205,7 +224,7 @@ $(document).ready(function () {
                     }
 
                     if (destination === 7) {
-                        $('#header').removeClass("showing");
+                        header.addClass("d-none");
                     }
                 }
             }

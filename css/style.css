@@ -233,7 +233,7 @@ strong {
   background: none;
 }
 #header .navbar ul li.active a.dropdown-item, #header-stories .navbar ul li.active a.dropdown-item {
-  color: #243C4B;
+  color: #243C4B !important;
 }
 #header .navbar ul li.active a.dropdown-item::after, #header-stories .navbar ul li.active a.dropdown-item::after {
   width: 100%;
