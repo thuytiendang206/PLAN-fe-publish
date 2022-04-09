@@ -32,12 +32,17 @@
                 </div>
                 <div class="col-6 d-flex justify-content-end">
                     <nav id="navbar" class="navbar">
-                        <h2 id="menu-label">Menu</h2>
-                        <img class="img-fluid" src="images/ellipse-icon-white.svg" alt="ellipse-icon-white.svg">
-                        <!--                            <ul>-->
-                        <!--                                <li><a href="Introduction">Introduction</a></li>-->
-                        <!--                                <li><a href="Stories">Stories</a></li>-->
-                        <!--                            </ul>-->
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <h2 id="menu-label" class="cl-white">Menu</h2>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end d-none">
+                            <li><a class="dropdown-item" href="#introduction">Introduction</a></li>
+                            <li><a class="dropdown-item" href="#stories">Stories</a></li>
+                        </ul>
+                        <div class="circle-wrapper">
+                            <img class="img-fluid  circle-animation" id="circle-1" src="images/circle-white-1.svg" alt="">
+                            <img class="img-fluid" id="circle-2" src="images/circle-white-2.svg" alt="">
+                        </div>
                     </nav><!-- .navbar -->
                 </div>
             </div>
