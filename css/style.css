@@ -1560,7 +1560,7 @@ strong {
 }
 
 /*=== BACKGROUND FROM LEFT TO RIGHT ===*/
-.fp-viewing-3 .bg-text:after {
+.fp-viewing-page-4 .bg-text:after {
   animation-name: triggerBackground;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1574,7 +1574,7 @@ strong {
   }
 }
 /*=== ZOOM TOP TO BOTTOM ===*/
-.fp-viewing-0 .zoomTopToBottom {
+.fp-viewing-page-1 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1588,7 +1588,7 @@ strong {
   }
 }
 /*=== FADE IN UP ===*/
-.fp-viewing-0 .page-1 .p1-fadeInUp {
+.fp-viewing-page-1 .page-1 .p1-fadeInUp {
   animation-name: fadeInUp;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1602,7 +1602,7 @@ strong {
   }
 }
 /*=== FADE IN RIGHT ===*/
-.fp-viewing-1 .fadeInRight {
+.fp-viewing-page-2 .fadeInRight {
   animation-name: fadeInRight;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1627,7 +1627,7 @@ strong {
   }
 }
 /*=== ACT BACKGROUND ANIMATION ===*/
-.fp-viewing-0 .act-bg {
+.fp-viewing-page-1 .act-bg {
   animation-name: backgroundCover;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1641,7 +1641,7 @@ strong {
   }
 }
 /*=== ZOOM RIGHT TO LEFT ===*/
-.fp-viewing-0 .zoomInLeft {
+.fp-viewing-page-1 .zoomInLeft {
   animation-name: zoomInLeft;
   animation-duration: 1.5s;
   animation-fill-mode: both;
@@ -1693,7 +1693,7 @@ strong {
   will-change: transform, opacity;
 }
 
-.fp-viewing-2 .carousel__item {
+.fp-viewing-page-3 .carousel__item {
   animation: carousel-animate-vertical 15s linear infinite;
 }
 
@@ -1719,6 +1719,39 @@ strong {
 
 .carousel__item:nth-child(6) {
   animation-delay: calc(2.5s * 4);
+}
+
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  3%, 16.6666666667% {
+    transform: translateY(90%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  19.6666666667%, 33.3333333333% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  36.3333333333%, 50% {
+    transform: translateY(-90%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  53% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1918,7 +1918,7 @@ strong {
 }
 
 /*=== BACKGROUND FROM LEFT TO RIGHT ===*/
-.fp-viewing-3 .bg-text:after {
+.fp-viewing-page-4 .bg-text:after {
   animation-name: triggerBackground;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1933,7 +1933,7 @@ strong {
 }
 
 /*=== ZOOM TOP TO BOTTOM ===*/
-.fp-viewing-0 .zoomTopToBottom {
+.fp-viewing-page-1 .zoomTopToBottom {
   animation-name: zoomTopToBottom;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1948,7 +1948,7 @@ strong {
 }
 
 /*=== FADE IN UP ===*/
-.fp-viewing-0 .page-1 .p1-fadeInUp {
+.fp-viewing-page-1 .page-1 .p1-fadeInUp {
   animation-name: fadeInUp;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1963,7 +1963,7 @@ strong {
 }
 
 /*=== FADE IN RIGHT ===*/
-.fp-viewing-1 .fadeInRight {
+.fp-viewing-page-2 .fadeInRight {
   animation-name: fadeInRight;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1992,7 +1992,7 @@ strong {
 
 /*=== ACT BACKGROUND ANIMATION ===*/
 // Hero banner take 4s
-.fp-viewing-0 .act-bg {
+.fp-viewing-page-1 .act-bg {
   animation-name: backgroundCover;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -2007,7 +2007,7 @@ strong {
 }
 
 /*=== ZOOM RIGHT TO LEFT ===*/
-.fp-viewing-0 .zoomInLeft {
+.fp-viewing-page-1 .zoomInLeft {
   animation-name: zoomInLeft;
   animation-duration: 1.5s;
   animation-fill-mode: both;
@@ -2068,7 +2068,7 @@ $slide-change-timing: 3; // percentage of total animation cycle
   will-change: transform, opacity;
 }
 
-.fp-viewing-2 .carousel__item {
+.fp-viewing-page-3 .carousel__item {
   animation: carousel-animate-vertical $animation-timing linear infinite;
 }
 
@@ -2078,37 +2078,37 @@ $slide-change-timing: 3; // percentage of total animation cycle
   }
 }
 
-//@keyframes carousel-animate-vertical {
-//  0% {
-//    transform: translateY(100%) scale(0.5);
-//    opacity: 0;
-//    visibility: hidden;
-//  }
-//  #{$slide-change-timing}%, #{$animation-steps-fraction}%  {
-//    transform: translateY(90%) scale(0.7);
-//    opacity: .4;
-//    visibility: visible;
-//  }
-//  #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
-//    transform: translateY(0) scale(1);
-//    opacity: 1;
-//    visibility: visible;
-//  }
-//  #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
-//    transform: translateY(-90%) scale(0.7);
-//    opacity: .4;
-//    visibility: visible;
-//  }
-//  #{($animation-steps-fraction * 3) + $slide-change-timing}% {
-//    transform: translateY(-90%) scale(0.5);
-//    opacity: 0;
-//    visibility: visible;
-//  }
-//  100% {
-//    transform: translateY(-90%) scale(0.5);
-//    opacity: 0;
-//    visibility: hidden;
-//  }
-//}
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  #{$slide-change-timing}%, #{$animation-steps-fraction}%  {
+    transform: translateY(90%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
+  #{$animation-steps-fraction + $slide-change-timing}%, #{$animation-steps-fraction * 2}% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  #{($animation-steps-fraction * 2) + $slide-change-timing}%, #{$animation-steps-fraction * 3}% {
+    transform: translateY(-90%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
+  #{($animation-steps-fraction * 3) + $slide-change-timing}% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-90%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 

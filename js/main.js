@@ -205,6 +205,7 @@ $(document).ready(function () {
     var header = $('#header');
     $('#home-page').fullpage({
         scrollOverflow: true,
+        anchors: ['page-1', 'page-2', 'page-3', 'page-4','page-5','page-6','stories'],
         onLeave: function (origin, destination, direction) {
             $('.section [data-aos]').removeClass("aos-animate");
             if (destination) {
