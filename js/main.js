@@ -191,7 +191,7 @@ $(document).ready(function () {
     }
 
     function drawImg(i) {
-        setTimeout(function () {
+        return setTimeout(function () {
             img.src = `images/people/0${i.toString()}.png`;
             requestAnimationFrame(() => {
                 context.drawImage(img, 0, 0);
@@ -201,11 +201,40 @@ $(document).ready(function () {
 
 
     // HOME PAGE, FULL PAGE JS
+    function autoMoveSection(destination) {
+        if (destination === 1) {
+            return setTimeout(function () {
+                $.fn.fullpage.moveTo(2);
+            }, 6000)
+        } else if (destination === 2) {
+            return setTimeout(function () {
+                $.fn.fullpage.moveTo(3);
+            }, 7000)
+        } else if (destination === 3) {
+            return setTimeout(function () {
+                $.fn.fullpage.moveTo(4);
+            }, 13500)
+        } else if (destination === 4) {
+            return setTimeout(function () {
+                $.fn.fullpage.moveTo(5);
+            }, 7300)
+        } else if (destination === 5) {
+            return setTimeout(function () {
+                $.fn.fullpage.moveTo(6);
+            }, 5000)
+        } else if (destination === 6) {
+            return setTimeout(function () {
+                $.fn.fullpage.moveTo(7);
+            }, 4500)
+        }
+    }
+
     var videoMap = $("#map-video");
     var header = $('#header');
+    var scrollAuto;
     $('#home-page').fullpage({
         scrollOverflow: true,
-        anchors: ['page-1', 'page-2', 'page-3', 'page-4','page-5','page-6','stories'],
+        anchors: ['page-1', 'page-2', 'page-3', 'page-4', 'page-5', 'page-6', 'stories'],
         onLeave: function (origin, destination, direction) {
             $('.section [data-aos]').removeClass("aos-animate");
             if (destination) {
@@ -231,6 +260,8 @@ $(document).ready(function () {
         afterLoad: function (origin, destination, direction) {
             $('.section.active [data-aos]').addClass("aos-animate");
             if (destination) {
+                clearTimeout(scrollAuto);
+                scrollAuto = autoMoveSection(destination);
                 if (destination === 1) {
                     $('.page-1').addClass("showing");
                 } else {
