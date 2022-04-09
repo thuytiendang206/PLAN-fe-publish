@@ -1604,6 +1604,13 @@ strong {
   animation-delay: 4s;
 }
 
+#first-page-photo .fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
 @keyframes fadeInUp {
   from {
     transform: translateY(100%);
