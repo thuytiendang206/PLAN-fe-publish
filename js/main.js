@@ -83,7 +83,7 @@ $(document).ready(function () {
         $('.theme-select').attr('data-selected-value', dataValue);
     });
 
-    // MENU
+    // MENU header
     var menuLabel = $('#menu-label');
     var liMenu = $('#navbar>ul>li');
     var ulMenu = $('#navbar>ul');
@@ -121,6 +121,46 @@ $(document).ready(function () {
         $(this).addClass("active")
     });
 
+    // End menu header
+
+    // MENU stories header
+    var storiesMenuLabel = $('#stories-menu-label');
+    var storiesLiMenu = $('#stories-navbar>ul>li');
+    var storiesUlMenu = $('#stories-navbar>ul');
+    var storiesCircle = $('#stories-circle-1');
+    var storiesCircle2 = $('#stories-circle-2');
+
+    function openMenuStories() {
+        storiesMenuLabel.addClass('open-menu');
+        const itemLength = storiesLiMenu.length;
+        storiesCircle.css('transform', 'translateY(calc(' + 100 * itemLength + '%  + 15px))');
+        storiesCircle2.css('transform', 'rotate(180deg) translate(0, -10px)');
+        storiesUlMenu.removeClass('d-none');
+        $(storiesLiMenu.get(itemLength - 1)).addClass("active");
+    }
+
+    function closeMenuStories() {
+        storiesLiMenu.removeClass("active");
+        storiesCircle.css('transform', 'translateY(' + 0 + '%)');
+        storiesCircle2.css('transform', 'translate(15px, 10px)');
+        storiesMenuLabel.removeClass('open-menu');
+        storiesUlMenu.addClass('d-none');
+    }
+
+    storiesMenuLabel.click(function () {
+        if ($(this).hasClass('open-menu')) {
+            closeMenuStories();
+        } else {
+            openMenuStories();
+        }
+    });
+
+    storiesLiMenu.hover(function () {
+        storiesLiMenu.removeClass("active");
+        storiesCircle.css('transform', 'translateY(calc(' + 100 * ($(this).index() + 1) + '%  + 15px))');
+        $(this).addClass("active")
+    });
+    // End - menu stories header
 
     // Set height of a div based on a percentage of width
     $(function () {
@@ -160,13 +200,6 @@ $(document).ready(function () {
     }
 
 
-    // Copy header for stories
-
-    function copyHeader() {
-        var $el = $('#header > div').clone();
-        $('#header-stories').append($el);
-    }
-
     // HOME PAGE, FULL PAGE JS
     var videoMap = $("#map-video");
     var header = $('#header');
@@ -175,6 +208,8 @@ $(document).ready(function () {
         onLeave: function (origin, destination, direction) {
             $('.section [data-aos]').removeClass("aos-animate");
             if (destination) {
+                closeMenu();
+                closeMenuStories();
                 if (destination === 1 || destination === 7) {
                     header.removeClass("showing");
                 } else if (destination === 3 || destination === 5 || destination === 6) {
@@ -183,8 +218,7 @@ $(document).ready(function () {
                     circle2.attr("src", "images/circle-white-2.svg");
                     menuLabel.css("color", "#FFFFFF");
                     $('#navbar>ul>li>a').css("color", "#FFFFFF");
-
-                } else if (destination === 2 || destination === 4 || destination === 7) {
+                } else if (destination === 2 || destination === 4) {
                     $("#logo-img").attr("src", "images/logo-louder-plan-blue.svg");
                     circle.attr("src", "images/circle-blue-1.svg");
                     circle2.attr("src", "images/circle-blue-2.svg");
@@ -196,7 +230,6 @@ $(document).ready(function () {
         afterLoad: function (origin, destination, direction) {
             $('.section.active [data-aos]').addClass("aos-animate");
             if (destination) {
-                header.remove("d-none");
                 if (destination === 1) {
                     $('.page-1').addClass("showing");
                 } else {
@@ -224,7 +257,7 @@ $(document).ready(function () {
                     }
 
                     if (destination === 7) {
-                        header.addClass("d-none");
+                        $('#header').removeClass("showing");
                     }
                 }
             }

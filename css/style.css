@@ -201,7 +201,7 @@ strong {
 #header .navbar, #header-stories .navbar {
   padding: 0;
 }
-#header .navbar #menu-label, #header-stories .navbar #menu-label {
+#header .navbar #menu-label, #header .navbar #stories-menu-label, #header-stories .navbar #menu-label, #header-stories .navbar #stories-menu-label {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
@@ -265,10 +265,10 @@ strong {
 #header .navbar .circle-wrapper, #header-stories .navbar .circle-wrapper {
   margin-bottom: 1rem;
 }
-#header .navbar #circle-1, #header-stories .navbar #circle-1 {
+#header .navbar #circle-1, #header .navbar #stories-circle-1, #header-stories .navbar #circle-1, #header-stories .navbar #stories-circle-1 {
   position: absolute;
 }
-#header .navbar #circle-2, #header-stories .navbar #circle-2 {
+#header .navbar #circle-2, #header .navbar #stories-circle-2, #header-stories .navbar #circle-2, #header-stories .navbar #stories-circle-2 {
   transform: translate(15px, 10px);
   transition: all ease-in-out 0.9s;
 }

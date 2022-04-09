@@ -245,7 +245,7 @@ strong {
   .navbar {
     padding: 0;
 
-    #menu-label {
+    #menu-label, #stories-menu-label {
       font-family: $font-veneer;
       font-style: normal;
       font-weight: 400;
@@ -283,6 +283,7 @@ strong {
       li.active {
         a.dropdown-item {
           color: $secondary-black-blue !important;
+
           &::after {
             width: 100%;
           }
@@ -323,11 +324,11 @@ strong {
       margin-bottom: 1rem;
     }
 
-    #circle-1 {
+    #circle-1, #stories-circle-1 {
       position: absolute;
     }
 
-    #circle-2 {
+    #circle-2, #stories-circle-2 {
       transform: translate(15px, 10px);
       transition: all ease-in-out 0.9s;
     }

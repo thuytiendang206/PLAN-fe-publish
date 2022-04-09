@@ -185,13 +185,18 @@
                             </a>
                         </div>
                         <div class="col-6 d-flex justify-content-end">
-                            <nav class="navbar">
-                                <h2 class="menu-label">Menu</h2>
-                                <img class="img-fluid" src="images/ellipse-icon-white.svg" alt="ellipse-icon-white.svg">
-                                <!--                            <ul>-->
-                                <!--                                <li><a href="Introduction">Introduction</a></li>-->
-                                <!--                                <li><a href="Stories">Stories</a></li>-->
-                                <!--                            </ul>-->
+                            <nav id="stories-navbar" class="navbar">
+                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <h2 id="stories-menu-label" class="cl-blue">Menu</h2>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end d-none">
+                                    <li><a class="dropdown-item cl-blue" href="#introduction">Introduction</a></li>
+                                    <li><a class="dropdown-item cl-blue" href="#stories">Stories</a></li>
+                                </ul>
+                                <div class="circle-wrapper">
+                                    <img class="img-fluid  circle-animation" id="stories-circle-1" src="images/circle-blue-1.svg" alt="">
+                                    <img class="img-fluid" id="stories-circle-2" src="images/circle-blue-2.svg" alt="">
+                                </div>
                             </nav><!-- .navbar -->
                         </div>
                     </div>
