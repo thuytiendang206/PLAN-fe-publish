@@ -746,6 +746,15 @@ strong {
   color: #0072CE;
   text-align: right;
 }
+#main-six-photos .s6pt-preface p {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: center;
+  color: #000000;
+}
 #main-six-photos .s6pt-stories-1 h2 {
   font-family: "Veneer";
   font-style: normal;

@@ -899,6 +899,18 @@ strong {
     text-align: right;
   }
 
+  .s6pt-preface {
+    p{
+      font-family: $font-arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 41px;
+      text-align: center;
+      color: $secondary-black;
+    }
+  }
+
   .s6pt-stories-1 {
 
     h2 {
