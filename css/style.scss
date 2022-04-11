@@ -1729,6 +1729,7 @@ strong {
               box-shadow: 0 3px 2px rgb(0 0 0 / 15%);
               max-height: 180px;
               overflow: auto;
+              margin-top: 1.2rem;
             }
           }
 
@@ -1826,6 +1827,10 @@ strong {
           border: none;
           background: $secondary-yellow;
           padding: 0 1rem;
+        }
+
+        .search-icon:hover, .search-icon:focus, .search-icon:active {
+          background-color: $primary-orange;
         }
       }
     }

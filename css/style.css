@@ -1411,6 +1411,7 @@ strong {
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
   max-height: 180px;
   overflow: auto;
+  margin-top: 1.2rem;
 }
 .main-home-stories .filter-section .filter-n-search form .faux-select .selected-option span {
   font-family: "Arial", sans-serif;
@@ -1488,6 +1489,9 @@ strong {
   border: none;
   background: #F1C400;
   padding: 0 1rem;
+}
+.main-home-stories .filter-section .filter-n-search .search-wrapper .search-icon:hover, .main-home-stories .filter-section .filter-n-search .search-wrapper .search-icon:focus, .main-home-stories .filter-section .filter-n-search .search-wrapper .search-icon:active {
+  background-color: #E17800;
 }
 .main-home-stories .filter-section .under-line {
   height: 4px;
