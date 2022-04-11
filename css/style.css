@@ -1456,11 +1456,22 @@ strong {
   background-color: #F1C400;
   border-color: #F1C400;
   border-radius: 9px 0 0 9px;
+  transition: all ease-in-out 0.5s;
+}
+.main-home-stories .filter-section .filter-n-search form .form-btn a.btn-apply:hover, .main-home-stories .filter-section .filter-n-search form .form-btn a.btn-apply:focus, .main-home-stories .filter-section .filter-n-search form .form-btn a.btn-apply:active {
+  background-color: #E17800;
+  border-color: #E17800;
+  color: #FFFFFF;
 }
 .main-home-stories .filter-section .filter-n-search form .form-btn a.btn-reset {
   background: #EBEBEB;
   border-color: #EBEBEB;
   border-radius: 0 9px 9px 0;
+  transition: all ease-in-out 0.5s;
+}
+.main-home-stories .filter-section .filter-n-search form .form-btn a.btn-reset:hover, .main-home-stories .filter-section .filter-n-search form .form-btn a.btn-reset:focus, .main-home-stories .filter-section .filter-n-search form .form-btn a.btn-reset:active {
+  background: #c0bebe;
+  border-color: #c0bebe;
 }
 .main-home-stories .filter-section .filter-n-search .search-wrapper .search {
   height: 100%;

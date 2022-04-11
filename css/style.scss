@@ -443,7 +443,7 @@ strong {
       transition: all ease-in-out 0.9s;
     }
 
-    button:hover, button:focus, button:active{
+    button:hover, button:focus, button:active {
       color: $secondary-white;
       background-color: $secondary-black-blue;
     }
@@ -914,7 +914,7 @@ strong {
   }
 
   .s6pt-preface {
-    p{
+    p {
       font-family: $font-arial;
       font-style: normal;
       font-weight: 400;
@@ -1784,15 +1784,26 @@ strong {
             background-color: $secondary-yellow;
             border-color: $secondary-yellow;
             border-radius: 9px 0 0 9px;
+            transition: all ease-in-out 0.5s;
+          }
 
+          a.btn-apply:hover, a.btn-apply:focus, a.btn-apply:active {
+            background-color: $primary-orange;
+            border-color: $primary-orange;
+            color: $secondary-white;
           }
 
           a.btn-reset {
             background: #EBEBEB;
             border-color: #EBEBEB;
             border-radius: 0 9px 9px 0;
+            transition: all ease-in-out 0.5s;
           }
 
+          a.btn-reset:hover, a.btn-reset:focus, a.btn-reset:active {
+            background: #c0bebe;
+            border-color: #c0bebe;
+          }
         }
       }
 
@@ -1985,7 +1996,7 @@ strong {
   animation-delay: 4s;
 }
 
-#first-page-photo .fadeInUp{
+#first-page-photo .fadeInUp {
   animation-name: fadeInUp;
   animation-duration: 1s;
   animation-fill-mode: both;
