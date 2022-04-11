@@ -66,6 +66,10 @@ p {
   color: #FFFFFF !important;
 }
 
+.cl-yellow {
+  color: #F1C400 !important;
+}
+
 .bg-orange {
   background-color: #E17800 !important;
 }
@@ -358,6 +362,13 @@ strong {
 .statistic-section .statistic-chart .signal-icon {
   width: 15px;
   height: 7px;
+}
+.statistic-section .statistic-chart button {
+  transition: all ease-in-out 0.9s;
+}
+.statistic-section .statistic-chart button:hover {
+  color: #FFFFFF;
+  background-color: #243C4B;
 }
 .statistic-section .statistic-flag {
   background-color: #0072CE;

@@ -87,6 +87,10 @@ p {
   color: $secondary-white !important;
 }
 
+.cl-yellow {
+  color: $secondary-yellow !important;
+}
+
 .bg-orange {
   background-color: $primary-orange !important;
 }
@@ -433,6 +437,15 @@ strong {
     .signal-icon {
       width: 15px;
       height: 7px;
+    }
+
+    button {
+      transition: all ease-in-out 0.9s;
+    }
+
+    button:hover{
+      color: $secondary-white;
+      background-color: $secondary-black-blue;
     }
   }
 
