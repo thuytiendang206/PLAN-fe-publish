@@ -1173,8 +1173,8 @@ strong {
   font-family: "Veneer";
   font-style: normal;
   font-weight: 400;
-  font-size: 70px;
-  line-height: 140%;
+  font-size: 90px;
+  line-height: 110%;
   color: #243C4B;
   margin: 0;
   z-index: 2;
@@ -1197,6 +1197,9 @@ strong {
 }
 #home-page .page-3 .page-3-wrapper {
   height: 100%;
+}
+#home-page .page-3 .icon {
+  height: fit-content;
 }
 #home-page .page-3 img {
   max-width: 13rem;
@@ -1710,7 +1713,7 @@ strong {
 }
 
 .fp-viewing-page-3 .carousel__item {
-  animation: carousel-animate-vertical 15s linear infinite;
+  animation: carousel-animate-vertical 15s linear;
 }
 
 .carousel__item:nth-child(1) {

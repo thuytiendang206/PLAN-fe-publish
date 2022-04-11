@@ -1436,8 +1436,8 @@ strong {
       font-family: $font-veneer;
       font-style: normal;
       font-weight: 400;
-      font-size: 70px;
-      line-height: 140%;
+      font-size: 90px;
+      line-height: 110%;
       color: $secondary-black-blue;
       margin: 0;
       z-index: 2;
@@ -1466,6 +1466,10 @@ strong {
   .page-3 {
     .page-3-wrapper {
       height: 100%;
+    }
+
+    .icon {
+      height: fit-content;
     }
 
     img {
@@ -2088,7 +2092,7 @@ $slide-change-timing: 3; // percentage of total animation cycle
 }
 
 .fp-viewing-page-3 .carousel__item {
-  animation: carousel-animate-vertical $animation-timing linear infinite;
+  animation: carousel-animate-vertical $animation-timing linear;
 }
 
 @for $i from 1 through ($carousel-items) {
