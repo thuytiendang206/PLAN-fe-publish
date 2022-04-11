@@ -443,7 +443,7 @@ strong {
       transition: all ease-in-out 0.9s;
     }
 
-    button:hover{
+    button:hover, button:focus, button:active{
       color: $secondary-white;
       background-color: $secondary-black-blue;
     }

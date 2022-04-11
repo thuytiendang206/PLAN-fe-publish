@@ -366,7 +366,7 @@ strong {
 .statistic-section .statistic-chart button {
   transition: all ease-in-out 0.9s;
 }
-.statistic-section .statistic-chart button:hover {
+.statistic-section .statistic-chart button:hover, .statistic-section .statistic-chart button:focus, .statistic-section .statistic-chart button:active {
   color: #FFFFFF;
   background-color: #243C4B;
 }
