@@ -794,7 +794,6 @@ strong {
 }
 #main-six-photos .s6pt-stories-1 .s6pt-stories-6-img-wrapper {
   position: relative;
-  height: 100%;
   overflow: hidden;
 }
 #main-six-photos .s6pt-stories-1 .hover-div {
@@ -802,10 +801,12 @@ strong {
   right: 0;
   left: 0;
   top: 0;
-  height: inherit;
   padding: inherit;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  bottom: 0;
+  justify-content: center;
 }
 #main-six-photos .s6pt-stories-1 .hover-div .hover-div-content {
   height: 100%;
@@ -1029,7 +1030,6 @@ strong {
 }
 #main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper {
   position: relative;
-  height: 100%;
 }
 #main-six-photos .s6pt-stories-6 .s6pt-stories-6-img-wrapper .hover-div {
   position: absolute;
